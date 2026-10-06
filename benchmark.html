@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchmark – HORST</title>
+<meta name="description" content="HORST-Hard: 2.400 Aufgaben in zwölf Kategorien. Alle Ergebnisse von HORST und LanguageTool.">
+<meta property="og:title" content="Benchmark – HORST">
+<meta property="og:description" content="HORST-Hard: 2.400 Aufgaben in zwölf Kategorien. Alle Ergebnisse von HORST und LanguageTool.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1014">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="top">
+<div class="wrap">
+<a class="logo" href="./" aria-label="HORST Startseite"><svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 838.2 256" aria-hidden="true"><path fill="#FFFFFF" d="M50 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12zM188 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12z"></path><path fill="#E63B2E" d="M128 72Q136 120 176 128Q136 136 128 184Q120 136 80 128Q120 120 128 72z"></path><g transform="translate(274 199.5) scale(1.1)"><path fill="#FFFFFF" d="M6.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM96.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM25 -86.5h70v27h-70zM130 -48a50 50 0 1 0 100 0a50 50 0 1 0-100 0zM157 -48a23 23 0 1 1 46 0a23 23 0 1 1-46 0zM252.5 -96h14a6.5 6.5 0 0 1 6.5 6.5v83a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-83a6.5 6.5 0 0 1 6.5-6.5zM246 -50A46 46 0 0 1 331.84 -73L308.45 -59.5A19 19 0 0 0 273 -50zM378 -36A36 31 0 1 1 410.63 -80.1L388.88 -69.96A12 7 0 1 0 378 -60zM378 -60A36 31 0 1 1 345.37 -15.9L367.12 -26.04A12 7 0 1 0 378 -36zM448.5 -118h14a6.5 6.5 0 0 1 6.5 6.5v105a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-105a6.5 6.5 0 0 1 6.5-6.5zM428 -96h54v22h-54z"></path></g></svg></a>
+<nav class="nav" aria-label="Hauptmenü">
+<a href="./">Start</a>
+<details class="dd">
+<summary>So funktioniert’s<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="dd-panel">
+<a href="funktionsweise.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><path d="M10 6.5h4a3 3 0 0 1 3 3V14"></path></svg></span><b>Funktionsweise</b><span>Vom fehlerhaften Satz zur Korrektur in sechs Schritten</span></a>
+<a href="modell.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></span><b>Das Modell</b><span>Transformer mit 209 Mio. Parametern, Bauteil für Bauteil</span></a>
+<a href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg></span><b>Training</b><span>Drei Stufen, Rauschgenerator, Grafikkarten</span></a>
+<a href="daten.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></span><b>Daten</b><span>Quellen, Mining, Dekontamination, Lizenzen</span></a>
+</div>
+</details>
+<a href="benchmark.html" aria-current="page">Benchmark</a>
+<a href="news.html">News</a>
+<a href="fahrplan.html">Fahrplan</a>
+<a href="entwickler.html">Entwickler</a>
+<a href="faq.html">FAQ</a>
+</nav>
+<a class="btn btn-red btn-sm cta" href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<details class="mnav">
+<summary>Menü<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<div class="mnav-panel">
+<a href="./">Start</a>
+<div class="grp">So funktioniert’s</div>
+<a href="funktionsweise.html">Funktionsweise</a>
+<a href="modell.html">Das Modell</a>
+<a href="training.html">Training</a>
+<a href="daten.html">Daten</a>
+<div class="grp">Projekt</div>
+<a href="benchmark.html" aria-current="page">Benchmark</a>
+<a href="news.html">News</a>
+<a href="fahrplan.html">Fahrplan</a>
+<a href="entwickler.html">Entwickler</a>
+<a href="faq.html">FAQ &amp; Glossar</a>
+<a href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo ↗</a>
+</div>
+</details>
+</div>
+</header>
+
+<main id="inhalt">
+<section class="phero dots">
+<div class="wrap">
+<nav class="crumbs" aria-label="Brotkrumen"><a href="./">Start</a><span>/</span><span aria-current="page">Benchmark</span></nav>
+<h1 class="h1">Gemessen,<br>nicht geschätzt.</h1>
+<p class="lead">HORST-Hard ist eine eigene, unabhängige Benchmark: 2.400 Aufgaben in zwölf Kategorien, gebaut aus Texten, die HORST im Training nie gesehen hat.</p>
+<div class="stats" style="margin-top: 48px">
+<div class="stat"><b style="color: #F2523F">0,83</b><span>HORST Stufe 2 · Makro-F0,5 über zehn Kategorien</span></div>
+<div class="stat"><b style="color: #BC8722">0,76</b><span>HORST Stufe 1</span></div>
+<div class="stat"><b style="color: #4F86E8">0,38</b><span>LanguageTool 6.6 zum Vergleich</span></div>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+<div class="layout">
+<aside class="side" aria-label="Auf dieser Seite">
+<span class="eyebrow">Auf dieser Seite</span>
+<nav>
+<a href="#kategorien">Ergebnisse je Kategorie</a>
+<a href="#kontrolle">Fehlerfreie Sätze</a>
+<a href="#tabelle">Alle Werte</a>
+<a href="#erkenntnisse">Was wir daraus lernen</a>
+<a href="#methodik">Methodik</a>
+<a href="#aufbau">So entstand HORST-Hard</a>
+<a href="#vorbehalte">Vorbehalte</a>
+</nav>
+</aside>
+
+<div class="content">
+<div class="prose"><h2 id="kategorien">Ergebnisse je Kategorie</h2><p>F0,5 je Kategorie, 200 Aufgaben pro Kategorie, Dekodierung mit Beam 1. Höher ist besser.</p></div>
+<div class="legend" style="margin-bottom: 18px"><span><i class="c-s2"></i>HORST Stufe 2</span><span><i class="c-s1"></i>HORST Stufe 1</span><span><i class="c-lt"></i>LanguageTool 6.6</span></div>
+<div class="gchart">
+<div class="grow"><div class="grow-l"><b>Groß und klein</b><span>Nomen, Satzanfänge</span></div><div><div class="gb" title="Stufe 2: 0,94"><div class="trk"><i class="c-s2" style="width: 94%"></i></div><span>0,94</span></div><div class="gb" title="Stufe 1: 0,94"><div class="trk"><i class="c-s1" style="width: 94%"></i></div><span>0,94</span></div><div class="gb" title="LanguageTool: 0,64"><div class="trk"><i class="c-lt" style="width: 64%"></i></div><span>0,64</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Kommas (schwer)</b><span>Nebensätze, Einschübe</span></div><div><div class="gb" title="Stufe 2: 0,95"><div class="trk"><i class="c-s2" style="width: 95%"></i></div><span>0,95</span></div><div class="gb" title="Stufe 1: 0,77"><div class="trk"><i class="c-s1" style="width: 77%"></i></div><span>0,77</span></div><div class="gb" title="LanguageTool: 0,24"><div class="trk"><i class="c-lt" style="width: 24%"></i></div><span>0,24</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Getrennt/zusammen</b><span>Komposita, Wendungen</span></div><div><div class="gb" title="Stufe 2: 0,91"><div class="trk"><i class="c-s2" style="width: 91%"></i></div><span>0,91</span></div><div class="gb" title="Stufe 1: 0,90"><div class="trk"><i class="c-s1" style="width: 90%"></i></div><span>0,90</span></div><div class="gb" title="LanguageTool: 0,05"><div class="trk"><i class="c-lt" style="width: 5%"></i></div><span>0,05</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Homophone</b><span>das/dass, seit/seid</span></div><div><div class="gb" title="Stufe 2: 0,95"><div class="trk"><i class="c-s2" style="width: 95%"></i></div><span>0,95</span></div><div class="gb" title="Stufe 1: 0,92"><div class="trk"><i class="c-s1" style="width: 92%"></i></div><span>0,92</span></div><div class="gb" title="LanguageTool: 0,36"><div class="trk"><i class="c-lt" style="width: 36%"></i></div><span>0,36</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Grammatik</b><span>Artikel, Endungen</span></div><div><div class="gb" title="Stufe 2: 0,89"><div class="trk"><i class="c-s2" style="width: 89%"></i></div><span>0,89</span></div><div class="gb" title="Stufe 1: 0,92"><div class="trk"><i class="c-s1" style="width: 92%"></i></div><span>0,92</span></div><div class="gb" title="LanguageTool: 0,39"><div class="trk"><i class="c-lt" style="width: 39%"></i></div><span>0,39</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Tippfehler (dicht)</b><span>viele pro Satz</span></div><div><div class="gb" title="Stufe 2: 0,91"><div class="trk"><i class="c-s2" style="width: 91%"></i></div><span>0,91</span></div><div class="gb" title="Stufe 1: 0,91"><div class="trk"><i class="c-s1" style="width: 91%"></i></div><span>0,91</span></div><div class="gb" title="LanguageTool: 0,62"><div class="trk"><i class="c-lt" style="width: 62%"></i></div><span>0,62</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Lautgetreu</b><span>wie gesprochen</span></div><div><div class="gb" title="Stufe 2: 0,94"><div class="trk"><i class="c-s2" style="width: 94%"></i></div><span>0,94</span></div><div class="gb" title="Stufe 1: 0,85"><div class="trk"><i class="c-s1" style="width: 85%"></i></div><span>0,85</span></div><div class="gb" title="LanguageTool: 0,55"><div class="trk"><i class="c-lt" style="width: 55%"></i></div><span>0,55</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Mix extrem</b><span>alles auf einmal</span></div><div><div class="gb" title="Stufe 2: 0,87"><div class="trk"><i class="c-s2" style="width: 87%"></i></div><span>0,87</span></div><div class="gb" title="Stufe 1: 0,88"><div class="trk"><i class="c-s1" style="width: 88%"></i></div><span>0,88</span></div><div class="gb" title="LanguageTool: 0,39"><div class="trk"><i class="c-lt" style="width: 39%"></i></div><span>0,39</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Lernertexte (echt)</b><span>Falko-MERLIN-Test</span></div><div><div class="gb" title="Stufe 2: 0,64"><div class="trk"><i class="c-s2" style="width: 64%"></i></div><span>0,64</span></div><div class="gb" title="Stufe 1: 0,37"><div class="trk"><i class="c-s1" style="width: 37%"></i></div><span>0,37</span></div><div class="gb" title="LanguageTool: 0,43"><div class="trk"><i class="c-lt" style="width: 43%"></i></div><span>0,43</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Wikipedia (echt)</b><span>echte Wikipedia-Korrekturen</span></div><div><div class="gb" title="Stufe 2: 0,26"><div class="trk"><i class="c-s2" style="width: 26%"></i></div><span>0,26</span></div><div class="gb" title="Stufe 1: 0,16"><div class="trk"><i class="c-s1" style="width: 16%"></i></div><span>0,16</span></div><div class="gb" title="LanguageTool: 0,16"><div class="trk"><i class="c-lt" style="width: 16%"></i></div><span>0,16</span></div></div></div>
+<div class="grow"><div class="grow-l"><b>Lange Texte</b><span>bis 500 Wörter</span></div><div><div class="gb"><div class="trk"></div><span class="na">–</span></div><div class="gb"><div class="trk"></div><span class="na">–</span></div><div class="gb" title="LanguageTool: 0,32"><div class="trk"><i class="c-lt" style="width: 32%"></i></div><span>0,32</span></div></div></div>
+</div>
+<p class="faint small" style="margin: 14px 0 0">Lange Texte sind für HORST noch nicht gemessen: Das braucht den neuen KV-Cache-Dekodierer.</p>
+
+<div class="prose"><h2 id="kontrolle">Fehlerfreie Sätze</h2><p>Die zwölfte Kategorie enthält Sätze ohne Fehler. Hier zählt, wie oft ein System sie <strong>unverändert</strong> lässt. Das ist die eine Stelle, an der Stufe 2 schlechter wurde.</p></div>
+<figure class="card wide" style="margin-left: 0; margin-right: 0">
+<figcaption style="font-weight: 700">Anteil unverändert gelassener fehlerfreier Sätze</figcaption>
+<div class="bars" style="margin-top: 24px">
+<div class="bar-row" title="HORST Stufe 1: 95 %"><span>HORST Stufe 1</span><div class="bar-track"><div class="bar c-s1" style="width: 95%"></div></div><span class="bar-val">95 %</span></div>
+<div class="bar-row" title="HORST Stufe 2: 88 %"><span>HORST Stufe 2</span><div class="bar-track"><div class="bar c-s2" style="width: 88%"></div></div><span class="bar-val">88 %</span></div>
+<div class="bar-row" title="LanguageTool 6.6: 45 %"><span>LanguageTool 6.6</span><div class="bar-track"><div class="bar c-lt" style="width: 45%"></div></div><span class="bar-val">45 %</span></div>
+</div>
+</figure>
+
+<div class="prose"><h2 id="tabelle">Alle Werte</h2><p>F0,5 aller drei Systeme, für Stufe 2 zusätzlich Precision (P) und Recall (R). Der beste F0,5-Wert je Zeile ist unterstrichen.</p></div>
+<div class="tbl-wrap wide">
+<table>
+<thead><tr><th>Kategorie</th><th class="num">n</th><th class="num">Stufe 2</th><th class="num">P</th><th class="num">R</th><th class="num">Stufe 1</th><th class="num">LanguageTool</th></tr></thead>
+<tbody>
+<tr><td>Groß und klein</td><td class="num">200</td><td class="num"><span class="best">0,94</span></td><td class="num">0,96</td><td class="num">0,88</td><td class="num">0,94</td><td class="num">0,64</td></tr>
+<tr><td>Kommas (schwer)</td><td class="num">200</td><td class="num"><span class="best">0,95</span></td><td class="num">0,96</td><td class="num">0,91</td><td class="num">0,77</td><td class="num">0,24</td></tr>
+<tr><td>Getrennt/zusammen</td><td class="num">200</td><td class="num"><span class="best">0,91</span></td><td class="num">0,93</td><td class="num">0,82</td><td class="num">0,90</td><td class="num">0,05</td></tr>
+<tr><td>Homophone</td><td class="num">200</td><td class="num"><span class="best">0,95</span></td><td class="num">0,96</td><td class="num">0,93</td><td class="num">0,92</td><td class="num">0,36</td></tr>
+<tr><td>Grammatik</td><td class="num">200</td><td class="num">0,89</td><td class="num">0,91</td><td class="num">0,84</td><td class="num"><span class="best">0,92</span></td><td class="num">0,39</td></tr>
+<tr><td>Tippfehler (dicht)</td><td class="num">200</td><td class="num"><span class="best">0,91</span></td><td class="num">0,92</td><td class="num">0,85</td><td class="num">0,91</td><td class="num">0,62</td></tr>
+<tr><td>Lautgetreu</td><td class="num">200</td><td class="num"><span class="best">0,94</span></td><td class="num">0,96</td><td class="num">0,86</td><td class="num">0,85</td><td class="num">0,55</td></tr>
+<tr><td>Mix extrem</td><td class="num">200</td><td class="num">0,87</td><td class="num">0,90</td><td class="num">0,78</td><td class="num"><span class="best">0,88</span></td><td class="num">0,39</td></tr>
+<tr><td>Lernertexte (echt)</td><td class="num">200</td><td class="num"><span class="best">0,64</span></td><td class="num">0,74</td><td class="num">0,42</td><td class="num">0,37</td><td class="num">0,43</td></tr>
+<tr><td>Wikipedia (echt)</td><td class="num">200</td><td class="num"><span class="best">0,26</span></td><td class="num">0,58</td><td class="num">0,08</td><td class="num">0,16</td><td class="num">0,16</td></tr>
+<tr><td>Lange Texte</td><td class="num">200</td><td class="num faint">–</td><td class="num faint">–</td><td class="num faint">–</td><td class="num faint">–</td><td class="num">0,32</td></tr>
+<tr><td><strong>Makro-F0,5</strong> (10 Kategorien)</td><td class="num">2.000</td><td class="num"><span class="best">0,83</span></td><td class="num"></td><td class="num"></td><td class="num">0,76</td><td class="num">0,38</td></tr>
+<tr><td>Kontrolle: unverändert</td><td class="num">200</td><td class="num">88 %</td><td class="num"></td><td class="num"></td><td class="num"><span class="best">95 %</span></td><td class="num">45 %</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="prose">
+<h2 id="erkenntnisse">Was wir daraus lernen</h2>
+<ul>
+<li><strong>Künstliche Fehler sind gelöst.</strong> In allen acht synthetischen Kategorien liegt HORST bei 0,87 oder höher.</li>
+<li><strong>Echte Fehler sind der Hebel.</strong> Mit echten Paaren im Training stieg der Wert bei Lernertexten von 0,37 auf 0,64, bei schweren Kommas von 0,77 auf 0,95.</li>
+<li><strong>Wikipedia-Korrekturen bleiben schwer.</strong> Recall 0,08: Viele echte Wikipedia-Änderungen sind Inhalt oder Stil, nicht Rechtschreibung. Die Obergrenze ist hier niedrig.</li>
+<li><strong>Mehr Mut, mehr Übergriffe.</strong> Stufe 2 korrigiert mehr – und lässt fehlerfreie Sätze seltener in Ruhe (95 % → 88 %). Fallen-Sätze im Training sollen das beheben.</li>
+</ul>
+
+<h2 id="methodik">Methodik</h2>
+<p><strong>F0,5</strong> kombiniert Precision (wie viele Änderungen richtig waren) und Recall (wie viele Fehler gefunden wurden). Die 0,5 bedeutet: Precision zählt doppelt. Eine falsche Korrektur ist schlimmer als eine verpasste – genau wie im echten Leben.</p>
+<p>Gezählt wird auf Ebene einzelner Änderungen (Edits). Der Scorer ist eine eigene Näherung an MaxMatch, nicht der offizielle ERRANT-Scorer. Die Zahlen sind deshalb mit Fachliteratur nur grob vergleichbar. Gemessen wurde mit Beam 1. Der Makrowert ist der Mittelwert über die zehn Korrekturkategorien mit HORST-Ergebnis.</p>
+
+<h2 id="aufbau">So entstand HORST-Hard</h2>
+<p>Zwölf Kategorien zu je 200 Aufgaben. Die synthetischen Kategorien stammen aus Wikipedia- und FineWeb-Abschnitten, die das Training nie gelesen hat; jeder Satz wurde gegen die Trainingssätze geprüft. Echte Fehler kommen aus dem Testteil von Falko-MERLIN und aus echten Wikipedia-Korrekturen.</p>
+<p>Der Test bleibt eingefroren und wird nur an Meilensteinen gemessen. Alle Entscheidungen im Training fallen auf einer getrennten Entwicklungs-Benchmark.</p>
+
+<h2 id="vorbehalte">Vorbehalte</h2>
+</div>
+<div class="note wide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg><div><strong>Eigene Benchmark, eigener Scorer.</strong> 200 Aufgaben je Kategorie sind eine kleine Stichprobe; einzelne Werte schwanken um einige Hundertstel. Die Messung ist nicht mit mehreren Durchläufen abgesichert. LanguageTool ist ein regelbasiertes Werkzeug mit anderem Ziel und wurde in der Standardeinstellung gemessen.</div></div>
+<div class="btns" style="margin-top: 32px">
+<a class="btn btn-ghost" href="https://bavarianator.github.io/horst-ai-site/">Ergebnis-Explorer mit Beispielen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<a class="btn btn-ghost" href="https://huggingface.co/datasets/Bayernator/german-ortho">Benchmark-Daten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<div class="foot-grid">
+<div class="foot-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 838.2 256" role="img" aria-label="HORST"><path fill="#FFFFFF" d="M50 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12zM188 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12z"></path><path fill="#E63B2E" d="M128 72Q136 120 176 128Q136 136 128 184Q120 136 80 128Q120 120 128 72z"></path><g transform="translate(274 199.5) scale(1.1)"><path fill="#FFFFFF" d="M6.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM96.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM25 -86.5h70v27h-70zM130 -48a50 50 0 1 0 100 0a50 50 0 1 0-100 0zM157 -48a23 23 0 1 1 46 0a23 23 0 1 1-46 0zM252.5 -96h14a6.5 6.5 0 0 1 6.5 6.5v83a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-83a6.5 6.5 0 0 1 6.5-6.5zM246 -50A46 46 0 0 1 331.84 -73L308.45 -59.5A19 19 0 0 0 273 -50zM378 -36A36 31 0 1 1 410.63 -80.1L388.88 -69.96A12 7 0 1 0 378 -60zM378 -60A36 31 0 1 1 345.37 -15.9L367.12 -26.04A12 7 0 1 0 378 -36zM448.5 -118h14a6.5 6.5 0 0 1 6.5 6.5v105a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-105a6.5 6.5 0 0 1 6.5-6.5zM428 -96h54v22h-54z"></path></g></svg><p>Deutsche Rechtschreib- und Grammatikkorrektur. Von Grund auf trainiert, offen dokumentiert.</p></div>
+<nav aria-label="So funktioniert’s"><b>So funktioniert’s</b><a href="funktionsweise.html">Funktionsweise</a><a href="modell.html">Das Modell</a><a href="training.html">Training</a><a href="daten.html">Daten</a></nav>
+<nav aria-label="Projekt"><b>Projekt</b><a href="benchmark.html">Benchmark</a><a href="news.html">News</a><a href="fahrplan.html">Fahrplan</a><a href="faq.html">FAQ &amp; Glossar</a></nav>
+<nav aria-label="Ressourcen"><b>Ressourcen</b><a href="entwickler.html">Für Entwickler</a><a href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo</a><a href="https://huggingface.co/Bayernator/horst-ai">Modell</a><a href="https://huggingface.co/datasets/Bayernator/german-ortho">Benchmark-Daten</a></nav>
+</div>
+<div class="foot-bottom"><span>© 2026 HORST-Projekt · Kein Fine-Tuning. Keine fremden Gewichte.</span><span>Forschungsmodell – Ergebnisse immer selbst prüfen.</span></div>
+</div>
+</footer>
+</div>
+</body>
+</html>

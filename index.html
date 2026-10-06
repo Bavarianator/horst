@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HORST – Deutsche Rechtschreib- und Grammatikkorrektur</title>
+<meta name="description" content="HORST korrigiert deutsche Texte: Rechtschreibung, Groß- und Kleinschreibung, Kommas und Grammatik. Ein KI-Modell, komplett von Grund auf trainiert.">
+<meta property="og:title" content="HORST – Deutsche Rechtschreib- und Grammatikkorrektur">
+<meta property="og:description" content="HORST korrigiert deutsche Texte: Rechtschreibung, Groß- und Kleinschreibung, Kommas und Grammatik. Ein KI-Modell, komplett von Grund auf trainiert.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1014">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="top">
+<div class="wrap">
+<a class="logo" href="./" aria-label="HORST Startseite"><svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 838.2 256" aria-hidden="true"><path fill="#FFFFFF" d="M50 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12zM188 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12z"></path><path fill="#E63B2E" d="M128 72Q136 120 176 128Q136 136 128 184Q120 136 80 128Q120 120 128 72z"></path><g transform="translate(274 199.5) scale(1.1)"><path fill="#FFFFFF" d="M6.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM96.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM25 -86.5h70v27h-70zM130 -48a50 50 0 1 0 100 0a50 50 0 1 0-100 0zM157 -48a23 23 0 1 1 46 0a23 23 0 1 1-46 0zM252.5 -96h14a6.5 6.5 0 0 1 6.5 6.5v83a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-83a6.5 6.5 0 0 1 6.5-6.5zM246 -50A46 46 0 0 1 331.84 -73L308.45 -59.5A19 19 0 0 0 273 -50zM378 -36A36 31 0 1 1 410.63 -80.1L388.88 -69.96A12 7 0 1 0 378 -60zM378 -60A36 31 0 1 1 345.37 -15.9L367.12 -26.04A12 7 0 1 0 378 -36zM448.5 -118h14a6.5 6.5 0 0 1 6.5 6.5v105a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-105a6.5 6.5 0 0 1 6.5-6.5zM428 -96h54v22h-54z"></path></g></svg></a>
+<nav class="nav" aria-label="Hauptmenü">
+<a href="./" aria-current="page">Start</a>
+<details class="dd">
+<summary>So funktioniert’s<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="dd-panel">
+<a href="funktionsweise.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><path d="M10 6.5h4a3 3 0 0 1 3 3V14"></path></svg></span><b>Funktionsweise</b><span>Vom fehlerhaften Satz zur Korrektur in sechs Schritten</span></a>
+<a href="modell.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></span><b>Das Modell</b><span>Transformer mit 209 Mio. Parametern, Bauteil für Bauteil</span></a>
+<a href="training.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg></span><b>Training</b><span>Drei Stufen, Rauschgenerator, Grafikkarten</span></a>
+<a href="daten.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></span><b>Daten</b><span>Quellen, Mining, Dekontamination, Lizenzen</span></a>
+</div>
+</details>
+<a href="benchmark.html">Benchmark</a>
+<a href="news.html">News</a>
+<a href="fahrplan.html">Fahrplan</a>
+<a href="entwickler.html">Entwickler</a>
+<a href="faq.html">FAQ</a>
+</nav>
+<a class="btn btn-red btn-sm cta" href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<details class="mnav">
+<summary>Menü<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<div class="mnav-panel">
+<a href="./" aria-current="page">Start</a>
+<div class="grp">So funktioniert’s</div>
+<a href="funktionsweise.html">Funktionsweise</a>
+<a href="modell.html">Das Modell</a>
+<a href="training.html">Training</a>
+<a href="daten.html">Daten</a>
+<div class="grp">Projekt</div>
+<a href="benchmark.html">Benchmark</a>
+<a href="news.html">News</a>
+<a href="fahrplan.html">Fahrplan</a>
+<a href="entwickler.html">Entwickler</a>
+<a href="faq.html">FAQ &amp; Glossar</a>
+<a href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo ↗</a>
+</div>
+</details>
+</div>
+</header>
+
+<main id="inhalt">
+<section class="hero dots">
+<div class="wrap">
+<span class="eyebrow"><svg viewBox="80 72 96 112" aria-hidden="true"><path fill="#E63B2E" d="M128 72Q136 120 176 128Q136 136 128 184Q120 136 80 128Q120 120 128 72z"></path></svg>Deutsche Rechtschreib- und Grammatikkorrektur</span>
+<h1 class="display">Schreib einfach.<br><span class="under">Horst</span> korrigiert.</h1>
+<div class="hero-grid">
+<div>
+<p class="lead">HORST verbessert deutsche Texte: Rechtschreibung, Groß- und Kleinschreibung, Kommas und Grammatik. Das Modell ist komplett von Grund auf trainiert – ohne fremde Gewichte, ohne Fine-Tuning.</p>
+<div class="btns" style="margin-top: 36px">
+<a class="btn btn-red" href="funktionsweise.html">So funktioniert’s<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost" href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+<dl class="facts">
+<div><dt>Parameter</dt><dd>209 Mio.</dd></div>
+<div><dt>F0,5 auf HORST-Hard</dt><dd>0,83</dd></div>
+<div><dt>Text am Stück</dt><dd>500 Wörter</dd></div>
+</dl>
+</div>
+<div class="sheet diff" aria-label="Beispiele für Korrekturen">
+<div class="sheet-row"><span class="eyebrow">Alltag</span><p><del>ich</del><ins>Ich</ins> <del>weis</del><ins>weiß</ins> nicht<ins>,</ins> <del>das</del><ins>dass</ins> es so ist. Morgen gehen wir in die <del>stadt</del><ins>Stadt</ins><del> ,</del> und kaufen ein.</p></div>
+<div class="sheet-row"><span class="eyebrow">Schule</span><p>Die Studenten haben in der <del>Biliothek</del><ins>Bibliothek</ins> einen <del>intressanten</del><ins>interessanten</ins> Vortrag über <del>umweltschutz</del><ins>Umweltschutz</ins> gehört.</p></div>
+<div class="sheet-row"><span class="eyebrow">Freizeit</span><p><del>Wen</del><ins>Wenn</ins> das Wetter schön ist<ins>,</ins> gehen wir mit unseren <del>freunden</del><ins>Freunden</ins> <del>spaziren</del><ins>spazieren</ins>.</p></div>
+<div class="sheet-foot"><span class="key"><i style="background: transparent; border-bottom: 2px solid #E63B2E; height: 8px"></i>durchgestrichen: entfernt</span><span class="key"><i style="background: #FFE45C"></i>markiert: von HORST eingefügt</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec-sm" aria-label="HORST in Zahlen">
+<div class="wrap">
+<div class="stats">
+<div class="stat"><b>209 Mio.</b><span>Parameter in einem Encoder-Decoder-Transformer mit 6 + 6 Schichten</span></div>
+<div class="stat"><b>30 Mio.</b><span>saubere deutsche Sätze als Trainingsgrundlage</span></div>
+<div class="stat"><b>2.400</b><span>Aufgaben in der unabhängigen Benchmark HORST-Hard</span></div>
+<div class="stat"><b class="red">0</b><span>fremde Gewichte: Tokenizer und Modell sind selbst trainiert</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top: 56px">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Was HORST korrigiert</span>
+<h2 class="h2">Von Tippfehler bis Komma.</h2>
+<p class="lead">Acht Fehlerarten, jede mit ihrem Wert auf HORST-Hard. F0,5 misst, wie treffsicher HORST korrigiert: 1,0 wäre perfekt.</p>
+</div>
+<a class="more" href="benchmark.html">Alle Ergebnisse<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="grid diff" style="--min: 250px">
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Tippfehler</h3><span class="score">0,91</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Ich habe <del>ienen</del><ins>einen</ins> Brief <del>geschriben</del><ins>geschrieben</ins>.</p><p class="small">Vertauschte, fehlende und doppelte Buchstaben.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Groß und klein</h3><span class="score">0,94</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Wir treffen uns am <del>montag</del><ins>Montag</ins> beim <del>bäcker</del><ins>Bäcker</ins>.</p><p class="small">Nomen, Satzanfänge, Anredeformen.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Kommas</h3><span class="score">0,95</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Ich hoffe<ins>,</ins> dass du kommst.</p><p class="small">Nebensätze, Einschübe, Aufzählungen.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">das/dass, seid/seit</h3><span class="score">0,95</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Wir warten <del>seid</del><ins>seit</ins> einer Stunde.</p><p class="small">Gleich klingende Wörter mit anderer Bedeutung.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Getrennt/zusammen</h3><span class="score">0,91</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Das hat mir <del>garnicht</del><ins>gar nicht</ins> gefallen.</p><p class="small">Zusammensetzungen und feste Wendungen.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Lautgetreu</h3><span class="score">0,94</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Ich habe <del>fiel</del><ins>viel</ins> gelernt.</p><p class="small">Geschrieben, wie man es spricht.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Grammatik</h3><span class="score">0,89</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Ich habe <del>den</del><ins>das</ins> Buch gelesen.</p><p class="small">Artikel, Endungen, Übereinstimmung.</p></article>
+<article class="card"><div class="card-top"><h3 class="h3" style="margin: 0">Lernertexte</h3><span class="score">0,64</span></div><p style="font-size: 18px; color: #F3F2EE; line-height: 1.75">Ich <del>bin</del><ins>habe</ins> gestern viel gearbeitet.</p><p class="small">Echte Fehler von Menschen, die Deutsch lernen.</p></article>
+</div>
+</div>
+</section>
+
+<section class="sec sec-alt">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">So funktioniert’s</span>
+<h2 class="h2">Sechs Schritte vom Fehler zur Korrektur.</h2>
+<p class="lead">HORST liest deinen Satz, versteht ihn als Ganzes und schreibt ihn neu – Wort für Wort, so wie er richtig wäre.</p>
+</div>
+<a class="more" href="funktionsweise.html">Ausführlich erklärt<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<ol class="flow">
+<li><h3 class="h3">Zerlegen</h3><p>Der Text wird in Absätze und Sätze geteilt.</p></li>
+<li><h3 class="h3">Tokenisieren</h3><p>Jeder Satz wird zu Wortstücken aus einem Vokabular von 32.000.</p></li>
+<li><h3 class="h3">Verstehen</h3><p>Der Encoder setzt jedes Wortstück mit allen anderen in Beziehung.</p></li>
+<li><h3 class="h3">Neu schreiben</h3><p>Der Decoder erzeugt den korrigierten Satz Stück für Stück.</p></li>
+<li><h3 class="h3">Abwägen</h3><p>Beam Search vergleicht mehrere Kandidaten und nimmt den besten.</p></li>
+<li><h3 class="h3">Markieren</h3><p>Ein Vergleich zeigt, was entfernt und was eingefügt wurde.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Tiefer eintauchen</span>
+<h2 class="h2">Alles über das Wie.</h2>
+</div>
+</div>
+<div class="grid" style="--min: 260px">
+<a class="card" href="funktionsweise.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><path d="M10 6.5h4a3 3 0 0 1 3 3V14"></path></svg></span><h3 class="h3">Funktionsweise</h3><p>Ein Beispielsatz auf dem Weg durch HORST – vom Tippfehler bis zur markierten Korrektur.</p></a>
+<a class="card" href="modell.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></span><h3 class="h3">Das Modell</h3><p>Encoder, Decoder, Attention: wo die 209 Millionen Parameter stecken und was sie tun.</p></a>
+<a class="card" href="training.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg></span><h3 class="h3">Training</h3><p>Wie HORST aus künstlichen und echten Fehlern lernt, in drei Stufen auf zwei Grafikkarten.</p></a>
+<a class="card" href="daten.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></span><h3 class="h3">Daten</h3><p>Woher die Sätze kommen, wie Fehlerpaare entstehen und warum die Benchmark sauber bleibt.</p></a>
+</div>
+</div>
+</section>
+
+<section class="sec sec-alt">
+<div class="wrap split">
+<div>
+<span class="eyebrow">Benchmark HORST-Hard</span>
+<h2 class="h2" style="margin-top: 14px">Mehr als doppelt so treffsicher wie LanguageTool.</h2>
+<p class="lead" style="margin-top: 20px">Gemessen auf 2.200 Aufgaben aus Texten, die HORST im Training nie gesehen hat. Makro-F0,5 über zehn Fehlerkategorien.</p>
+<p class="muted small" style="margin-top: 18px">Eigene Benchmark und eigener Scorer. Die Vorbehalte stehen offen auf der Ergebnisseite.</p>
+<a class="more" href="benchmark.html">Methodik und alle Werte<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<figure class="card" style="margin: 0; padding: 32px">
+<figcaption style="font-weight: 700">Makro-F0,5 auf HORST-Hard <span class="faint" style="font-weight: 400">(höher ist besser)</span></figcaption>
+<div class="bars" style="margin-top: 28px">
+<div class="bar-row" title="HORST Stufe 2: 0,83"><span>HORST Stufe 2</span><div class="bar-track"><div class="bar c-s2" style="width: 83%"></div></div><span class="bar-val">0,83</span></div>
+<div class="bar-row" title="HORST Stufe 1: 0,76"><span>HORST Stufe 1</span><div class="bar-track"><div class="bar c-s1" style="width: 76%"></div></div><span class="bar-val">0,76</span></div>
+<div class="bar-row" title="LanguageTool 6.6: 0,38"><span>LanguageTool 6.6</span><div class="bar-track"><div class="bar c-lt" style="width: 38%"></div></div><span class="bar-val">0,38</span></div>
+</div>
+<div class="axis"><span>0</span><span>0,5</span><span>1,0</span></div>
+</figure>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Neuigkeiten</span>
+<h2 class="h2">Aus dem Trainingslager.</h2>
+</div>
+<a class="more" href="news.html">Alle News<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="grid" style="--min: 320px">
+<a class="card" href="news.html"><div class="post-meta"><span class="mono small faint">06.10.2026</span><span class="tag tag-red">Benchmark</span></div><h3 class="h3">HORST-Hard: Stufe 2 erreicht 0,83 – LanguageTool 0,38</h3><p>Bei echten Lernertexten springt HORST von 0,37 auf 0,64. Ein Rückschritt bleibt: Fehlerfreie Sätze lässt er seltener in Ruhe.</p></a>
+<a class="card" href="news.html"><div class="post-meta"><span class="mono small faint">06.10.2026</span><span class="tag">Training</span></div><h3 class="h3">Phase 3 startet: echte Fehler, saubere Messung, Rückübersetzung</h3><p>KV-Cache, Dekontamination und ein eigenes Rückwärtsmodell sollen die nächste Stufe tragen.</p></a>
+<a class="card" href="news.html"><div class="post-meta"><span class="mono small faint">02.10.2026</span><span class="tag">Release</span></div><h3 class="h3">HORST ist live: Demo auf Hugging Face</h3><p>Die Demo läuft auf ZeroGPU und korrigiert bis zu 500 Wörter auf einmal – mit Änderungsansicht.</p></a>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top: 0">
+<div class="wrap">
+<div class="card" style="padding: 44px; display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 300px">
+<span class="eyebrow">Ehrlich gesagt</span>
+<h2 class="h2" style="margin-top: 14px; font-size: 36px">Was HORST noch nicht gut kann.</h2>
+<p class="muted" style="margin-top: 16px">HORST ist ein Forschungsmodell. Prüfe wichtige Texte immer selbst.</p>
+</div>
+<ul class="grid" style="--min: 240px; flex: 2 1 520px; margin: 0; padding: 0; list-style: none; gap: 24px 32px">
+<li><b>Echte Lernertexte</b><p class="muted small" style="margin: 6px 0 0">Kasus und Wortstellung sind schwerer als Tippfehler: Hier liegt HORST bei 0,64.</p></li>
+<li><b>Fehlerfreie Sätze</b><p class="muted small" style="margin: 6px 0 0">88 % bleiben unverändert. Manchmal ändert HORST, was schon richtig war.</p></li>
+<li><b>Eigennamen und Fachwörter</b><p class="muted small" style="margin: 6px 0 0">Ungewöhnliche Schreibweisen, Dialekt und Anglizismen werden gelegentlich „verbessert“.</p></li>
+<li><b>Nur Deutsch</b><p class="muted small" style="margin: 6px 0 0">Andere Sprachen und Programmcode behandelt HORST nicht zuverlässig.</p></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap" style="padding-top: 88px; padding-bottom: 88px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div style="max-width: 720px">
+<h2 class="h1">Sieh selbst, was HORST ändert.</h2>
+<p class="lead" style="margin-top: 20px">Die Demo zeigt jede Korrektur einzeln. Für eigene Projekte gibt es Gewichte, Code und eine API.</p>
+</div>
+<div class="btns">
+<a class="btn btn-light" href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<a class="btn btn-ghost" href="entwickler.html" style="border-color: rgba(255,255,255,0.7); color: #FFFFFF">Für Entwickler</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<div class="foot-grid">
+<div class="foot-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 838.2 256" role="img" aria-label="HORST"><path fill="#FFFFFF" d="M50 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12zM188 36h18a12 12 0 0 1 12 12v160a12 12 0 0 1-12 12h-18a12 12 0 0 1-12-12v-160a12 12 0 0 1 12-12z"></path><path fill="#E63B2E" d="M128 72Q136 120 176 128Q136 136 128 184Q120 136 80 128Q120 120 128 72z"></path><g transform="translate(274 199.5) scale(1.1)"><path fill="#FFFFFF" d="M6.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM96.5 -130h14a6.5 6.5 0 0 1 6.5 6.5v117a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-117a6.5 6.5 0 0 1 6.5-6.5zM25 -86.5h70v27h-70zM130 -48a50 50 0 1 0 100 0a50 50 0 1 0-100 0zM157 -48a23 23 0 1 1 46 0a23 23 0 1 1-46 0zM252.5 -96h14a6.5 6.5 0 0 1 6.5 6.5v83a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-83a6.5 6.5 0 0 1 6.5-6.5zM246 -50A46 46 0 0 1 331.84 -73L308.45 -59.5A19 19 0 0 0 273 -50zM378 -36A36 31 0 1 1 410.63 -80.1L388.88 -69.96A12 7 0 1 0 378 -60zM378 -60A36 31 0 1 1 345.37 -15.9L367.12 -26.04A12 7 0 1 0 378 -36zM448.5 -118h14a6.5 6.5 0 0 1 6.5 6.5v105a6.5 6.5 0 0 1-6.5 6.5h-14a6.5 6.5 0 0 1-6.5-6.5v-105a6.5 6.5 0 0 1 6.5-6.5zM428 -96h54v22h-54z"></path></g></svg><p>Deutsche Rechtschreib- und Grammatikkorrektur. Von Grund auf trainiert, offen dokumentiert.</p></div>
+<nav aria-label="So funktioniert’s"><b>So funktioniert’s</b><a href="funktionsweise.html">Funktionsweise</a><a href="modell.html">Das Modell</a><a href="training.html">Training</a><a href="daten.html">Daten</a></nav>
+<nav aria-label="Projekt"><b>Projekt</b><a href="benchmark.html">Benchmark</a><a href="news.html">News</a><a href="fahrplan.html">Fahrplan</a><a href="faq.html">FAQ &amp; Glossar</a></nav>
+<nav aria-label="Ressourcen"><b>Ressourcen</b><a href="entwickler.html">Für Entwickler</a><a href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo</a><a href="https://huggingface.co/Bayernator/horst-ai">Modell</a><a href="https://huggingface.co/datasets/Bayernator/german-ortho">Benchmark-Daten</a></nav>
+</div>
+<div class="foot-bottom"><span>© 2026 HORST-Projekt · Kein Fine-Tuning. Keine fremden Gewichte.</span><span>Forschungsmodell – Ergebnisse immer selbst prüfen.</span></div>
+</div>
+</footer>
+</div>
+</body>
+</html>
