@@ -60,10 +60,10 @@ a{color:var(--red-2)} a:hover{color:var(--text)}
 .mnav-panel a{padding:12px;border-radius:8px;color:var(--text);text-decoration:none;font-weight:600}
 .mnav-panel a[aria-current=page]{background:var(--card)}
 .mnav-panel .grp{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);padding:16px 12px 4px}
-@media(max-width:1060px){.nav,.top .cta{display:none}.mnav{display:block}}
+@media(max-width:1140px){.nav,.top .cta{display:none}.mnav{display:block}}
 
 /* Knöpfe */
-.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;border:1.5px solid transparent;font-stretch:108%;line-height:1.2}
+.btn{background:transparent;color:var(--text);cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;border:1.5px solid transparent;font-stretch:108%;line-height:1.2}
 .btn svg{width:18px;height:18px;flex:none}
 .btn-red{background:var(--red-btn);color:#fff} .btn-red:hover{background:#D3372A;color:#fff}
 .btn-ghost{border-color:var(--line-2);color:var(--text)} .btn-ghost:hover{border-color:var(--text);color:var(--text)}
@@ -279,5 +279,27 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .foot nav a{color:var(--text-2);text-decoration:none;padding:6px 0}
 .foot nav a:hover{color:var(--text)}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-3)}
+
+/* Formulare und Bedienelemente */
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.label{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px}
+textarea,.input{width:100%;background:#090A0D;border:1.5px solid var(--line-2);border-radius:12px;color:var(--text);font:inherit;font-size:17px;line-height:1.6;padding:14px 16px}
+textarea{resize:vertical;min-height:140px}
+textarea:focus,.input:focus{outline:none;border-color:var(--text-2);box-shadow:0 0 0 3px rgba(255,228,92,.18)}
+::placeholder{color:var(--text-3)}
+.seg{display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;background:var(--bg-2);border:1px solid var(--line);border-radius:12px}
+.seg button{min-height:40px;padding:0 14px;border:0;border-radius:9px;background:transparent;color:var(--text-2);font:inherit;font-size:14.5px;font-weight:600;cursor:pointer}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed=true]{background:var(--text);color:var(--bg)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:40px;padding:0 14px;border:1px dashed var(--line-2);border-radius:999px;background:transparent;color:var(--text-2);font:inherit;font-size:14px;cursor:pointer}
+.chip:hover{border-color:var(--text-3);color:var(--text)}
+.chip[aria-pressed=true]{border-style:solid;border-color:var(--yellow);color:var(--text)}
+input[type=range]{accent-color:var(--red);width:100%}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--text-2)}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--text-3)}
+.status.ok::before{background:#3FB871} .status.warn::before{background:var(--yellow)} .status.err::before{background:var(--red)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
