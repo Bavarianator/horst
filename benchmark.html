@@ -15,6 +15,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/rechner.css">
 </head>
 <body>
 <div class="page">
@@ -100,6 +101,7 @@
 <a href="#tabelle">Alle Werte</a>
 <a href="#erkenntnisse">Was wir daraus lernen</a>
 <a href="#methodik">Methodik</a>
+<a href="#rechner">F0,5-Rechner</a>
 <a href="#aufbau">So entstand HORST-Hard</a>
 <a href="#vorbehalte">Vorbehalte</a>
 </nav>
@@ -168,6 +170,61 @@
 <p><strong>F0,5</strong> kombiniert Precision (wie viele Änderungen richtig waren) und Recall (wie viele Fehler gefunden wurden). Die 0,5 bedeutet: Precision zählt doppelt. Eine falsche Korrektur ist schlimmer als eine verpasste – genau wie im echten Leben.</p>
 <p>Gezählt wird auf Ebene einzelner Änderungen (Edits). Der Scorer ist eine eigene Näherung an MaxMatch, nicht der offizielle ERRANT-Scorer. Die Zahlen sind deshalb mit Fachliteratur nur grob vergleichbar. Gemessen wurde mit Beam 1. Der Makrowert ist der Mittelwert über die zehn Korrekturkategorien mit HORST-Ergebnis.</p>
 
+<h2 id="rechner">Selbst rechnen: der F0,5-Rechner</h2>
+<p>Stell ein, wie viele Fehler HORST richtig korrigiert, wie oft er falsch eingreift und wie viele er übersieht. Der Rechner zeigt Precision, Recall, F0,5 und zum Vergleich F1 – und was ein weiterer Fehler kostet.</p>
+</div>
+<div class="rc wide">
+<noscript><div class="note"><div>Der Rechner braucht JavaScript. Die Formeln stehen oben unter Methodik: F0,5 = 1,25 · P · R / (0,25 · P + R).</div></div></noscript>
+<div class="panel" id="rc-app" hidden>
+<div class="rc-grid">
+<div>
+<div class="rc-in">
+<div class="rc-field">
+<label class="label" for="rc-tp">Richtige Korrekturen</label>
+<span class="rc-hint">HORST ändert etwas, und die Änderung stimmt.</span>
+<div class="rc-ctl"><input type="range" id="rc-tp-r" min="0" max="200" step="1" value="0" aria-label="Richtige Korrekturen (Schieberegler)"><input class="input" type="number" id="rc-tp" min="0" max="200" step="1" value="0" inputmode="numeric"></div>
+</div>
+<div class="rc-field">
+<label class="label" for="rc-fp">Falsche Korrekturen</label>
+<span class="rc-hint">HORST ändert etwas, das richtig war, oder korrigiert falsch.</span>
+<div class="rc-ctl"><input type="range" id="rc-fp-r" min="0" max="200" step="1" value="0" aria-label="Falsche Korrekturen (Schieberegler)"><input class="input" type="number" id="rc-fp" min="0" max="200" step="1" value="0" inputmode="numeric"></div>
+</div>
+<div class="rc-field">
+<label class="label" for="rc-fn">Übersehene Fehler</label>
+<span class="rc-hint">Ein Fehler steht im Text, HORST lässt ihn stehen.</span>
+<div class="rc-ctl"><input type="range" id="rc-fn-r" min="0" max="200" step="1" value="0" aria-label="Übersehene Fehler (Schieberegler)"><input class="input" type="number" id="rc-fn" min="0" max="200" step="1" value="0" inputmode="numeric"></div>
+</div>
+</div>
+<div class="rc-presets">
+<span class="label" id="rc-presets-l">Voreinstellungen</span>
+<div class="chips" role="group" aria-labelledby="rc-presets-l">
+<button type="button" class="chip" data-rc-preset="lerner" aria-pressed="false">Lernertexte (HORST Stufe 2)</button>
+<button type="button" class="chip" data-rc-preset="vorsichtig" aria-pressed="false">Vorsichtig</button>
+<button type="button" class="chip" data-rc-preset="uebereifrig" aria-pressed="false">Übereifrig</button>
+<button type="button" class="chip" data-rc-preset="perfekt" aria-pressed="false">Perfekt</button>
+</div>
+<p>„Lernertexte“ ist nachgestellt mit Beispielzahlen und ergibt etwa die Werte von HORST Stufe 2 auf Lernertexten.</p>
+</div>
+</div>
+<div>
+<div aria-live="polite">
+<dl class="rc-big">
+<div><dt>Precision</dt><dd id="rc-big-p">–</dd></div><div><dt>Recall</dt><dd id="rc-big-r">–</dd></div><div class="main"><dt>F0,5</dt><dd id="rc-big-f05">–</dd></div><div><dt>F1</dt><dd id="rc-big-f1">–</dd></div>
+</dl>
+</div>
+<div class="bars" aria-hidden="true">
+<div class="bar-row"><span>Precision</span><div class="bar-track"><div class="bar c-lt" id="rc-bar-p" style="width:0"></div></div><span class="bar-val" id="rc-val-p">–</span></div>
+<div class="bar-row"><span>Recall</span><div class="bar-track"><div class="bar c-s1" id="rc-bar-r" style="width:0"></div></div><span class="bar-val" id="rc-val-r">–</span></div>
+<div class="bar-row"><span>F0,5</span><div class="bar-track"><div class="bar c-s2" id="rc-bar-f05" style="width:0"></div></div><span class="bar-val" id="rc-val-f05">–</span></div>
+<div class="bar-row"><span>F1</span><div class="bar-track"><div class="bar c-red" id="rc-bar-f1" style="width:0"></div></div><span class="bar-val" id="rc-val-f1">–</span></div>
+</div>
+<pre class="rc-formula mono" id="rc-formula" tabindex="0" aria-label="Formeln mit eingesetzten Zahlen"></pre>
+<p class="rc-sentence" id="rc-sentence" aria-live="polite"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="prose">
 <h2 id="aufbau">So entstand HORST-Hard</h2>
 <p>Zwölf Kategorien zu je 200 Aufgaben. Die synthetischen Kategorien stammen aus Wikipedia- und FineWeb-Abschnitten, die das Training nie gelesen hat; jeder Satz wurde gegen die Trainingssätze geprüft. Echte Fehler kommen aus dem Testteil von Falko-MERLIN und aus echten Wikipedia-Korrekturen.</p>
 <p>Der Test bleibt eingefroren und wird nur an Meilensteinen gemessen. Alle Entscheidungen im Training fallen auf einer getrennten Entwicklungs-Benchmark.</p>
@@ -199,5 +256,6 @@
 </footer>
 <!-- /layout:footer -->
 </div>
+<script type="module" src="js/rechner.js"></script>
 </body>
 </html>
