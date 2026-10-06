@@ -29,7 +29,7 @@ assert.equal(show(d), 'eine [-Kaffee Maschine-]{+Kaffeemaschine+}');
 assert.equal(countEdits(d), 1);
 
 // Ein geleertes Feld zählt jedes fehlende Wort, nicht nur einen Block
-assert.equal(countEdits(wordDiff('', 'Wir warten seit einer Stunde.')), 5);
+assert.equal(countEdits(wordDiff('', 'Wir warten seit einer Stunde.')), 6);
 assert.equal(countEdits(wordDiff('per Email.', 'per E-Mail.')), 1);
 
 // Riesige Eingaben bleiben schnell und speicherarm (grober Block statt LCS-Tabelle)
@@ -41,5 +41,10 @@ assert.equal(show(d), flut + '{+ x+}'.replace('{+ x+}', ' {+x+}'));
 d = wordDiff(flut.replaceAll('!', '.'), flut);
 assert.ok(performance.now() - t0 < 3000, 'zu große Mittelteile werden grob gezeigt');
 assert.equal(d.filter((x) => x.op !== 'same').length, 2);
+
+// Benachbarte Groß/klein-Fehler und Komma am falschen Wort zählen einzeln
+assert.equal(countEdits(wordDiff('Das Paket kommt', 'das paket kommt')), 2);
+assert.equal(countEdits(wordDiff('Ich weiß nicht, ob wir', 'Ich weiß nciht ob wir')), 2);
+assert.equal(countEdits(wordDiff('Ende.', 'Ende?')), 1);
 
 console.log('ok: diff');

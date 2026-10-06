@@ -57,7 +57,7 @@ export function wordDiff(a, b) {
     const [a, ws, b] = blocks.slice(k, k + 3);
     if (a.same === undefined && b.same === undefined && /^\s+$/.test(ws.same || '')) {
       const del = a.del + ws.same + b.del, ins = a.ins + ws.same + b.ins;
-      if (squash(del) === squash(ins)) blocks.splice(k--, 3, { del, ins });
+      if (words(del) !== words(ins) && squash(del) === squash(ins)) blocks.splice(k--, 3, { del, ins });
     }
   }
   const segs = [];
@@ -83,13 +83,28 @@ export function wordDiff(a, b) {
 }
 
 const squash = (s) => s.replace(/\s+/g, '').toLowerCase();
-const words = (s) => s.split(/\s+/).filter(Boolean).length;
+// Wörter = Stücke mit Buchstaben oder Ziffern; Satzzeichen zählen extra (Bindestrich und Apostroph gehören zum Wort)
+const words = (s) => s.split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
+const marks = (s) => tokenize(s).filter((t) => /^[^\s\p{L}\p{N}'’-]$/u.test(t));
+function markDiff(a, b) {
+  const rest = marks(a);
+  let extra = 0;
+  for (const t of marks(b)) {
+    const i = rest.indexOf(t);
+    if (i >= 0) rest.splice(i, 1);
+    else extra++;
+  }
+  return Math.max(rest.length, extra);
+}
 
-// Zahl der Änderungen: je Block die geänderten Wörter, reine Getrennt-/Zusammenschreibung zählt einfach
+// Zahl der Änderungen: je Block die geänderten Wörter plus geänderte Satzzeichen;
+// reine Getrennt-/Zusammenschreibung (andere Wortzahl, gleiche Buchstaben) zählt einfach
 export function countEdits(segs) {
   let n = 0, del = '', ins = '';
   const close = () => {
-    if (/\S/.test(del + ins)) n += squash(del) === squash(ins) ? 1 : Math.max(words(del), words(ins));
+    if (/\S/.test(del + ins)) {
+      n += words(del) !== words(ins) && squash(del) === squash(ins) ? 1 : Math.max(words(del), words(ins)) + markDiff(del, ins);
+    }
     del = ins = '';
   };
   for (const s of segs) {

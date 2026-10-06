@@ -225,7 +225,7 @@ function init() {
       kEdits.textContent = n;
       kWords.textContent = words(text);
       kTime.textContent = `${seconds(ms)} s`;
-      setStatus('ok', n ? `Fertig – ${n} ${n === 1 ? 'Änderung' : 'Änderungen'}` : 'Fertig – keine Änderungen');
+      setStatus('ok', n ? `Fertig – ${n} ${n === 1 ? 'Änderung' : 'Änderungen'}` : out.trim() !== text.trim() ? 'Fertig – nur Leerzeichen angepasst' : 'Fertig – keine Änderungen');
       return out;
     } catch (e) {
       if (id !== runId) return undefined;
@@ -337,11 +337,13 @@ function init() {
     if (typeof out !== 'string') return;
     const segs = wordDiff(out, st.clean);
     const rest = countEdits(segs);
-    const fixed = Math.max(0, st.n - rest);
+    // Gleiche Zählweise für vorher und nachher, sonst passt „X von Y“ nicht zusammen
+    const total = countEdits(wordDiff(st.broken, st.clean)) || st.n;
+    const fixed = Math.max(0, total - rest);
     renderDiff(lab.checkDiff, segs);
     lab.check.hidden = false;
     const b = document.createElement('strong');
-    b.textContent = `HORST hat ${fixed} von ${st.n} Fehlern behoben.`;
+    b.textContent = `HORST hat ${fixed} von ${total} Fehlern behoben.`;
     const note = rest === 0
       ? ' Das Ergebnis stimmt genau mit dem Original überein.'
       : ` ${rest} ${rest === 1 ? 'Stelle weicht' : 'Stellen weichen'} noch vom Original ab. Auch neue Änderungen von HORST zählen dabei als Abweichung – manche davon sind vielleicht gar nicht falsch.`;
