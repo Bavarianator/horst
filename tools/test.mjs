@@ -32,4 +32,14 @@ assert.equal(countEdits(d), 1);
 assert.equal(countEdits(wordDiff('', 'Wir warten seit einer Stunde.')), 5);
 assert.equal(countEdits(wordDiff('per Email.', 'per E-Mail.')), 1);
 
+// Riesige Eingaben bleiben schnell und speicherarm (grober Block statt LCS-Tabelle)
+const flut = Array.from({ length: 500 }, () => '!'.repeat(40)).join(' ');
+const t0 = performance.now();
+d = wordDiff(flut, flut + ' x');
+assert.ok(performance.now() - t0 < 1000, 'gleicher Anfang wird ohne Tabelle erkannt');
+assert.equal(show(d), flut + '{+ x+}'.replace('{+ x+}', ' {+x+}'));
+d = wordDiff(flut.replaceAll('!', '.'), flut);
+assert.ok(performance.now() - t0 < 3000, 'zu große Mittelteile werden grob gezeigt');
+assert.equal(d.filter((x) => x.op !== 'same').length, 2);
+
 console.log('ok: diff');

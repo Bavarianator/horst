@@ -8,7 +8,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 VOID = {"meta", "link", "br", "img", "input", "hr", "base", "source", "wbr", "area", "col", "embed", "track",
         "path", "rect", "ellipse", "circle", "line", "polyline", "polygon", "stop"}
-PRIVATE = ()
+# Begriffe, die nie veröffentlicht werden dürfen, stehen bewusst nicht im Repo:
+# eine pro Zeile in ~/.config/horst-website/private.txt (lokal, nicht eingecheckt)
+PRIVATE_FILE = Path.home() / ".config/horst-website/private.txt"
+PRIVATE = tuple(w.strip().lower() for w in PRIVATE_FILE.read_text().splitlines() if w.strip()) if PRIVATE_FILE.exists() else ()
 
 
 class Page(HTMLParser):
@@ -67,6 +70,8 @@ def main():
     r = subprocess.run([sys.executable, str(ROOT / "tools/layout.py"), "--check"], capture_output=True, text=True)
     if r.returncode:
         errors.append(r.stderr.strip() or r.stdout.strip())
+    if not PRIVATE:
+        print(f"Hinweis: {PRIVATE_FILE} fehlt, Prüfung auf persönliche Angaben übersprungen")
     if errors:
         sys.exit("FEHLER\n" + "\n".join(errors))
     print(f"ok: {len(pages)} Seiten")

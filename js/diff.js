@@ -5,23 +5,39 @@ export function tokenize(s) {
   return s.match(/\s+|[\p{L}\p{N}]+|[^\s\p{L}\p{N}]/gu) || [];
 }
 
-// ponytail: LCS in O(n·m) Speicher, reicht für die 500-Wörter-Grenze (~2.000 Tokens); darüber Hirschberg
+// Größte LCS-Tabelle (Zellen); darüber wird der geänderte Mittelteil grob als ein Block gezeigt
+export const MAX_CELLS = 4e6;
+
+// ponytail: LCS in O(n·m) Speicher nur für den Mittelteil nach gleichem Anfang/Ende, gedeckelt durch MAX_CELLS; darüber Hirschberg
 export function wordDiff(a, b) {
   const A = tokenize(a), B = tokenize(b);
-  const n = A.length, m = B.length, w = m + 1;
-  const L = new Uint16Array((n + 1) * w);
-  for (let i = n - 1; i >= 0; i--) {
-    for (let j = m - 1; j >= 0; j--) {
-      L[i * w + j] = A[i] === B[j] ? L[(i + 1) * w + j + 1] + 1 : Math.max(L[(i + 1) * w + j], L[i * w + j + 1]);
+  let p = 0, s = 0;
+  while (p < A.length && p < B.length && A[p] === B[p]) p++;
+  while (s < A.length - p && s < B.length - p && A[A.length - 1 - s] === B[B.length - 1 - s]) s++;
+  // Leerraum an der Schnittkante bleibt im Mittelteil, damit die Ausrichtung wie beim vollen Vergleich bleibt
+  while (p > 0 && /^\s+$/.test(A[p - 1])) p--;
+  while (s > 0 && /^\s+$/.test(A[A.length - s])) s--;
+  const MA = A.slice(p, A.length - s), MB = B.slice(p, B.length - s);
+  const n = MA.length, m = MB.length, w = m + 1;
+  const raw = A.slice(0, p).map((t) => ({ t, op: 'same' }));
+  if ((n + 1) * w > MAX_CELLS) {
+    for (const t of MA) raw.push({ t, op: 'del' });
+    for (const t of MB) raw.push({ t, op: 'ins' });
+  } else {
+    const L = new Uint16Array((n + 1) * w); // LCS ≤ min(n, m) ≤ 2.000, passt in 16 Bit
+    for (let i = n - 1; i >= 0; i--) {
+      for (let j = m - 1; j >= 0; j--) {
+        L[i * w + j] = MA[i] === MB[j] ? L[(i + 1) * w + j + 1] + 1 : Math.max(L[(i + 1) * w + j], L[i * w + j + 1]);
+      }
+    }
+    let i = 0, j = 0;
+    while (i < n || j < m) {
+      if (i < n && j < m && MA[i] === MB[j]) raw.push({ t: MA[i++], op: 'same' }), j++;
+      else if (j < m && (i === n || L[i * w + j + 1] >= L[(i + 1) * w + j])) raw.push({ t: MB[j++], op: 'ins' });
+      else raw.push({ t: MA[i++], op: 'del' });
     }
   }
-  const raw = [];
-  let i = 0, j = 0;
-  while (i < n || j < m) {
-    if (i < n && j < m && A[i] === B[j]) raw.push({ t: A[i++], op: 'same' }), j++;
-    else if (j < m && (i === n || L[i * w + j + 1] >= L[(i + 1) * w + j])) raw.push({ t: B[j++], op: 'ins' });
-    else raw.push({ t: A[i++], op: 'del' });
-  }
+  for (const t of A.slice(A.length - s)) raw.push({ t, op: 'same' });
   // Änderungsblöcke sammeln, Leerraum darin behalten (sonst wird aus „Kaffee Maschine“ „KaffeeMaschine“)
   const blocks = [];
   let cur = null;
