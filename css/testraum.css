@@ -1,0 +1,37 @@
+/* Testraum und Fehlerlabor */
+.tr-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media(max-width:900px){.tr-grid{grid-template-columns:minmax(0,1fr)}}
+.tr-panel{display:grid;gap:22px;min-width:0}
+.tr-panel .h3{font-size:22px}
+@media(max-width:600px){.tr-panel{padding:18px}}
+input[type=range]{min-height:44px;margin:0} /* Touch-Ziel */
+.tr-examples .chip{border-radius:12px;text-align:left;padding:8px 14px;line-height:1.4}
+.tr-count{margin:8px 0 0;color:var(--text-3)}
+.tr-count.over{color:var(--red-2);font-weight:700}
+.tr-privacy{display:flex;gap:12px;align-items:flex-start;margin:0;color:var(--text-2);padding:14px 16px;border:1px solid var(--line-2);border-radius:12px;background:var(--bg-2)}
+.tr-privacy svg{flex:none;width:20px;height:20px;color:var(--yellow);margin-top:2px}
+.tr-privacy strong{color:var(--text)}
+#tr-secs:empty{display:none}
+.tr-result{margin:0;min-height:180px;white-space:pre-wrap;overflow-wrap:anywhere;background:#090A0D;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:18px;line-height:1.8}
+.tr-empty{min-height:180px;border:1.5px dashed var(--line-2);border-radius:12px;padding:16px 18px;color:var(--text-2);font-size:15.5px}
+.tr-empty p{margin:0 0 10px}
+.tr-empty strong{color:var(--text)}
+.tr-err:empty{display:none}
+.tr-err{border:1px solid var(--red);background:rgba(230,59,46,.08);border-radius:12px;padding:14px 16px;font-size:15.5px;color:var(--text)}
+.tr-err p{margin:0 0 6px}
+.tr-err a{display:inline-block;padding:10px 0;font-weight:700}
+.tr-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0}
+.tr-kpis>div{background:var(--bg);padding:12px 14px;min-width:0}
+.tr-kpis dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3)}
+.tr-kpis dd{margin:4px 0 0;font-size:22px;font-weight:800;font-stretch:112%;white-space:nowrap}
+.tr-note{margin-top:24px}
+.lab-clean{min-height:96px}
+.lab-rand{margin-top:12px}
+.lab-out{min-height:0}
+.lab-out:empty::before{content:attr(data-empty);color:var(--text-3)}
+.lab-info{margin:10px 0 0}
+.lab-info:empty{display:none}
+.lab-score{margin:0;font-size:17px;color:var(--text-2)}
+.lab-score strong{color:var(--text)}
+.lab-score:empty{display:none}
+.tr-links{margin-top:32px}

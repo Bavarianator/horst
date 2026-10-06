@@ -15,6 +15,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/testraum.css">
 </head>
 <body>
 <!-- layout:header -->
@@ -84,9 +85,141 @@
 </div>
 </section>
 
-<section class="sec">
+<section class="sec-sm" id="testen">
 <div class="wrap">
-<p class="muted">Inhalt folgt.</p>
+<div class="tr-grid">
+<div class="panel tr-panel">
+<div class="toolbar">
+<h2 class="h3">Dein Text</h2>
+<p class="status" id="tr-status" role="status" aria-live="polite"><span id="tr-status-text">Demo noch nicht abgefragt</span><span id="tr-secs" class="mono" aria-hidden="true"></span></p>
+</div>
+<div>
+<label class="label" for="tr-text">Text zum Korrigieren</label>
+<textarea id="tr-text" rows="8" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Schreib hier deinen Text oder nimm ein Beispiel …" aria-describedby="tr-count tr-privacy"></textarea>
+<p class="tr-count small mono" id="tr-count">0 / 500 Wörter</p>
+</div>
+<div>
+<span class="label" id="tr-ex-l">Beispiele zum Ausprobieren</span>
+<div class="chips tr-examples" id="tr-examples" role="group" aria-labelledby="tr-ex-l">
+<button type="button" class="chip">ich weis nicht das es so ist.</button>
+<button type="button" class="chip">Seid gestern regnet es ohne pause.</button>
+<button type="button" class="chip">Wir haben im kino eis gegessen.</button>
+<button type="button" class="chip">Er komt vieleicht später weil der Zug verspätung hat.</button>
+</div>
+</div>
+<div>
+<span class="label" id="tr-beam-l">Genauigkeit</span>
+<div class="seg" id="tr-beam" role="group" aria-labelledby="tr-beam-l">
+<button type="button" data-v="1" aria-pressed="false">Schnell</button>
+<button type="button" data-v="3" aria-pressed="true">Ausgewogen</button>
+<button type="button" data-v="5" aria-pressed="false">Sehr genau</button>
+</div>
+</div>
+<div class="btns">
+<button type="button" class="btn btn-red" id="tr-go">Korrigieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<button type="button" class="btn btn-ghost" id="tr-clear">Leeren</button>
+</div>
+<p class="tr-privacy small" id="tr-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><span><strong>Datenschutz:</strong> Dein Text geht erst beim Klick auf „Korrigieren“ an die HORST-Demo bei Hugging Face. Diese Website selbst speichert nichts. Beim ersten Klick ins Textfeld fragt sie nur ab, ob die Demo gerade läuft.</span></p>
+</div>
+
+<div class="panel tr-panel">
+<div class="toolbar">
+<h2 class="h3">Ergebnis</h2>
+<div class="seg" id="tr-view" role="group" aria-label="Ansicht">
+<button type="button" data-v="diff" aria-pressed="true">Änderungen</button>
+<button type="button" data-v="plain" aria-pressed="false">Nur Ergebnis</button>
+</div>
+</div>
+<div class="tr-empty diff" id="tr-empty">
+<p><strong>Noch nichts korrigiert.</strong></p>
+<p>Gib einen Text ein oder nimm ein Beispiel und klick auf „Korrigieren“. Hier siehst du dann jede Änderung: <del>rot durchgestrichen</del> fällt weg, <ins>gelb markiert</ins> kommt dazu.</p>
+</div>
+<div class="diff tr-result" id="tr-result" aria-live="polite" hidden></div>
+<div class="tr-err" id="tr-err" aria-live="polite"></div>
+<dl class="tr-kpis">
+<div><dt>Änderungen</dt><dd id="tr-edits">–</dd></div>
+<div><dt>Wörter</dt><dd id="tr-words">–</dd></div>
+<div><dt>Dauer</dt><dd id="tr-time">–</dd></div>
+</dl>
+<div class="btns">
+<button type="button" class="btn btn-ghost btn-sm" id="tr-copy" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path></svg><span id="tr-copy-l">Kopieren</span></button>
+</div>
+</div>
+</div>
+<div class="note tr-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><div><strong>Ehrlicher Hinweis:</strong> Die Demo nutzt die zuletzt veröffentlichten Gewichte. Die können älter sein als die auf der <a href="benchmark.html">Benchmark-Seite</a> gemessene Stufe 2. Die Demo läuft auf einer geteilten Grafikkarte mit Warteschlange und knappem Tageskontingent; ein schlafender Space braucht etwa eine Minute zum Aufwachen.</div></div>
+</div>
+</section>
+
+<section class="sec sec-alt" id="labor">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Fehlerlabor</span>
+<h2 class="h2">Mach den Satz kaputt.</h2>
+<p class="lead">Nimm einen fehlerfreien Satz, bau gezielt Fehler ein und schick ihn an HORST. Danach siehst du, wie viele davon HORST wieder behoben hat.</p>
+</div>
+</div>
+<div class="tr-grid">
+<div class="panel tr-panel">
+<div>
+<label class="label" for="lab-clean">Sauberer Satz</label>
+<textarea id="lab-clean" class="lab-clean" rows="3" spellcheck="false" autocomplete="off">Ich weiß nicht, ob wir das Paket schon morgen bekommen.</textarea>
+<button type="button" class="btn btn-ghost btn-sm lab-rand" id="lab-rand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"></path></svg>Zufallssatz</button>
+</div>
+<div>
+<span class="label" id="lab-types-l">Fehlerarten</span>
+<div class="chips" id="lab-types" role="group" aria-labelledby="lab-types-l">
+<button type="button" class="chip" data-v="tipp" aria-pressed="true">Tippfehler</button>
+<button type="button" class="chip" data-v="umlaut" aria-pressed="true">Umlaute und ß</button>
+<button type="button" class="chip" data-v="verwechslung" aria-pressed="true">Verwechslungen</button>
+<button type="button" class="chip" data-v="gross" aria-pressed="true">Groß/klein</button>
+<button type="button" class="chip" data-v="komma" aria-pressed="true">Kommas</button>
+</div>
+</div>
+<div>
+<label class="label" for="lab-count">Fehlerdichte: <output id="lab-count-out" for="lab-count">3</output> Fehler</label>
+<input type="range" id="lab-count" min="1" max="5" step="1" value="3">
+</div>
+<div class="btns">
+<button type="button" class="btn btn-light" id="lab-break">Kaputt machen</button>
+<button type="button" class="btn btn-red" id="lab-send" disabled>An HORST schicken<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+
+<div class="panel tr-panel">
+<div>
+<span class="label">Kaputter Satz</span>
+<p class="diff tr-result lab-out" id="lab-broken" data-empty="Noch nichts kaputt. Wähle Fehlerarten und klick auf „Kaputt machen“."></p>
+<p class="lab-info small muted" id="lab-info" aria-live="polite"></p>
+</div>
+<div id="lab-check" hidden>
+<span class="label">Abgleich mit dem Original</span>
+<p class="diff tr-result lab-out" id="lab-check-diff"></p>
+<p class="lab-info small faint">Durchgestrichen: so steht es bei HORST. Gelb: so steht es im Original.</p>
+</div>
+<p class="lab-score" id="lab-score" aria-live="polite"></p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec-sm" id="fair">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Tipps</span>
+<h2 class="h2">So misst du fair.</h2>
+</div>
+</div>
+<ol class="flow">
+<li><h3 class="h3">Ganze Sätze</h3><p>Gib ganze Sätze mit Satzzeichen ein, so wie in einem echten Text. Einzelne Wörter ohne Zusammenhang sind für jede Korrektur schwer, weil der Kontext fehlt.</p></li>
+<li><h3 class="h3">Genauigkeit</h3><p>„Schnell“ entspricht Beam 1 – so wurde auch die Benchmark gemessen. „Sehr genau“ prüft mehr Varianten und braucht dafür länger.</p></li>
+<li><h3 class="h3">Eigennamen prüfen</h3><p>Namen, Fachwörter und Abkürzungen kennt HORST nicht immer. Prüf solche Änderungen selbst, bevor du sie übernimmst.</p></li>
+</ol>
+<div class="btns tr-links">
+<a class="btn btn-ghost" href="funktionsweise.html">So funktioniert HORST<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost" href="benchmark.html">Zur Benchmark<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
 </div>
 </section>
 </main>
@@ -105,5 +238,6 @@
 </div>
 </footer>
 <!-- /layout:footer -->
+<script type="module" src="js/testraum.js"></script>
 </body>
 </html>
