@@ -15,6 +15,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/start.css">
 </head>
 <body>
 <div class="page">
@@ -85,8 +86,8 @@
 <div>
 <p class="lead">HORST verbessert deutsche Texte: Rechtschreibung, Groß- und Kleinschreibung, Kommas und Grammatik. Das Modell ist komplett von Grund auf trainiert – ohne fremde Gewichte, ohne Fine-Tuning.</p>
 <div class="btns" style="margin-top: 36px">
-<a class="btn btn-red" href="funktionsweise.html">So funktioniert’s<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<a class="btn btn-ghost" href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<a class="btn btn-red" href="testraum.html">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost" href="funktionsweise.html">So funktioniert’s</a>
 </div>
 <dl class="facts">
 <div><dt>Parameter</dt><dd>209 Mio.</dd></div>
@@ -111,6 +112,35 @@
 <div class="stat"><b>30 Mio.</b><span>saubere deutsche Sätze als Trainingsgrundlage</span></div>
 <div class="stat"><b>2.400</b><span>Aufgaben in der unabhängigen Benchmark HORST-Hard</span></div>
 <div class="stat"><b class="red">0</b><span>fremde Gewichte: Tokenizer und Modell sind selbst trainiert</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec-sm spiel-sec" id="finde-den-fehler" aria-labelledby="spiel-titel">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Der Satz des Tages</span>
+<h2 class="h2" id="spiel-titel">Finde den Fehler.</h2>
+<p class="lead">In jedem Satz steckt genau ein falsch geschriebenes Wort. Tippe auf das Wort, das du für falsch hältst.</p>
+</div>
+</div>
+<noscript><p class="muted">Dieses Spiel braucht JavaScript. Du kannst es im Testraum, im Korrektur-Duell und im Spickzettel trotzdem ausprobieren.</p></noscript>
+<div class="panel spiel diff" id="spiel" hidden>
+<div class="toolbar">
+<span class="label" style="margin: 0" id="spiel-hinweis">Satz des Tages</span>
+<span class="mono small muted">Versuche: <b id="spiel-versuche">0</b></span>
+</div>
+<div class="spiel-satz" id="spiel-satz" role="group" aria-labelledby="spiel-hinweis"></div>
+<p class="spiel-meldung" id="spiel-meldung" role="status" aria-live="polite"></p>
+<div class="btns">
+<button type="button" class="btn btn-ghost btn-sm" id="spiel-aufloesen">Auflösen</button>
+<button type="button" class="btn btn-ghost btn-sm" id="spiel-weiter">Nächster Satz</button>
+</div>
+</div>
+<div class="spiel-links">
+<a class="more" href="duell.html">Mehr davon im Korrektur-Duell<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="more" href="spickzettel.html">Regel nachschlagen im Spickzettel<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
 </section>
@@ -176,6 +206,22 @@
 </div>
 </section>
 
+<section class="sec" style="padding-top: 0">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<span class="eyebrow">Ausprobieren</span>
+<h2 class="h2">Jetzt du.</h2>
+</div>
+</div>
+<div class="grid" style="--min: 300px">
+<a class="card card-big" href="testraum.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.5 9.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"></path><path d="M7.5 15h9"></path></svg></span><h3 class="h3">Testraum</h3><p>Eigenen Text live korrigieren lassen, mit Fehlerlabor.</p></a>
+<a class="card card-big" href="duell.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><h3 class="h3">Korrektur-Duell</h3><p>Acht Sätze, versteckte Fehler, eine Uhr.</p></a>
+<a class="card card-big" href="spickzettel.html"><span class="ico" style="display: flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2z"></path><path d="M8 7h8M8 11h6"></path></svg></span><h3 class="h3">Spickzettel</h3><p>Die häufigsten Fehler mit Regel und Eselsbrücke.</p></a>
+</div>
+</div>
+</section>
+
 <section class="sec sec-alt">
 <div class="wrap split">
 <div>
@@ -236,10 +282,10 @@
 <div class="wrap" style="padding-top: 88px; padding-bottom: 88px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
 <div style="max-width: 720px">
 <h2 class="h1">Sieh selbst, was HORST ändert.</h2>
-<p class="lead" style="margin-top: 20px">Die Demo zeigt jede Korrektur einzeln. Für eigene Projekte gibt es Gewichte, Code und eine API.</p>
+<p class="lead" style="margin-top: 20px">Der Testraum zeigt jede Korrektur einzeln. Für eigene Projekte gibt es Gewichte, Code und eine API.</p>
 </div>
 <div class="btns">
-<a class="btn btn-light" href="https://huggingface.co/spaces/Bayernator/HORST">Live-Demo öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<a class="btn btn-light" href="testraum.html">Testraum öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <a class="btn btn-ghost" href="entwickler.html" style="border-color: rgba(255,255,255,0.7); color: #FFFFFF">Für Entwickler</a>
 </div>
 </div>
@@ -261,5 +307,6 @@
 </footer>
 <!-- /layout:footer -->
 </div>
+<script type="module" src="js/start.js"></script>
 </body>
 </html>

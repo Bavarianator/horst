@@ -1,0 +1,22 @@
+/* Startseite: „Finde den Fehler“ und große Karten */
+.spiel-sec{padding:16px 0 40px}
+.spiel-sec .sec-head{margin-bottom:32px}
+.spiel{padding:28px}
+.spiel .label{font-size:12px}
+.spiel-satz{display:flex;flex-wrap:wrap;gap:10px 8px;align-items:center;margin:22px 0 8px;font-size:clamp(19px,2.4vw,24px);line-height:1.4}
+.einheit{white-space:nowrap}
+.wort{white-space:normal;max-width:100%;min-height:44px;min-width:44px;padding:0 10px;border:1.5px dashed var(--line-2);border-radius:10px;background:var(--bg);color:var(--text);font:inherit;cursor:pointer}
+.wort:hover{border-color:var(--text);background:var(--card-2)}
+.wort:disabled{cursor:default}
+.wort.geprueft{border-style:solid;border-color:var(--line);background:transparent;color:var(--text-3)}
+.wort.geprueft::after{content:" \2713";font-size:.8em}
+.wort.gefunden{border-style:solid;border-color:var(--yellow);opacity:1}
+.wort.gefunden:disabled{color:var(--text)}
+.spiel-meldung{min-height:3.2em;margin:16px 0 18px;color:var(--text-2);font-size:16px}
+.spiel-meldung b{color:var(--text)}
+.spiel-links{display:flex;flex-wrap:wrap;gap:0 32px;margin-top:20px}
+.card-big{padding:32px}
+.card-big .h3{font-size:26px;margin-top:20px}
+.card-big .ico{width:48px;height:48px;border-radius:12px}
+.card-big .ico svg{width:24px;height:24px}
+@media(max-width:600px){.spiel{padding:20px 16px}}
