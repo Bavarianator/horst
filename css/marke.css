@@ -1,0 +1,63 @@
+/* Markenseite */
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.side a[aria-current=location]{color:var(--text);background:var(--card);font-weight:700;box-shadow:inset 3px 0 0 var(--red)}
+.tp-light{background:#fff} .tp-dark{background:#15171C}
+tbody tr:last-child .rh{border-bottom:0}
+.rh{font-family:var(--font);font-size:15.5px;letter-spacing:0;text-transform:none;color:var(--text);background:none;font-weight:700}
+
+/* Logo und Kacheln */
+.logo-hero{display:flex;align-items:center;justify-content:center;min-height:200px;padding:32px;border-radius:var(--r);border:1px solid var(--line-2)}
+.logo-hero img{max-width:100%;height:auto}
+.tiles{list-style:none;padding:0}
+.tile{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.tile-prev{display:flex;align-items:center;justify-content:center;height:170px;padding:20px;border-bottom:1px solid var(--line-2)}
+.tile-prev img{max-width:100%;height:auto;max-height:110px;width:auto}
+.tile-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.tile-body .h3{margin:0;font-size:19px}
+.tile-body p{flex:1;margin-bottom:16px}
+
+/* Schutzraum */
+.clear{margin:28px 0 36px}
+.clear-box{--u:clamp(14px,3.2vw,24px);position:relative;display:inline-block;background:#fff;padding:var(--u);border:1.5px dashed #C42E22;border-radius:var(--r);line-height:0}
+.clear-box img{width:calc(var(--u)*15);height:auto;outline:1px dotted #8A90A0;outline-offset:0}
+.clear-x{position:absolute;font:600 13px/1 var(--mono);color:#C42E22;width:var(--u);text-align:center}
+.cx-t{top:calc(var(--u)/2 - 6px);left:50%} .cx-b{bottom:calc(var(--u)/2 - 6px);left:50%}
+.cx-l{left:0;top:50%;margin-top:-6px} .cx-r{right:0;top:50%;margin-top:-6px}
+.clear figcaption,.min figcaption{font-size:13.5px;color:var(--text-3);line-height:1.4;margin-top:12px}
+.minsz{display:flex;flex-wrap:wrap;align-items:flex-end;gap:24px 48px;padding:28px 32px;border-radius:var(--r);border:1px solid var(--line-2);margin-bottom:12px}
+.min{margin:0}
+.min img{display:block}
+.min figcaption{color:#4B505B;margin-top:10px}
+
+/* Farben */
+.sw{display:flex;flex-direction:column;padding:0;overflow:hidden;list-style:none}
+.sw-chip{height:76px;margin:14px 14px 0;border-radius:8px;background:var(--c);border:1px solid var(--text-3)}
+.sw .h3{margin:18px 22px 0;font-size:19px}
+.sw p{margin:6px 22px 0;font-size:14.5px}
+.sw dl{margin:14px 22px 0;display:grid;gap:6px;flex:1;align-content:start}
+.sw dl>div{display:flex;gap:12px;font-size:14.5px}
+.sw dt{flex:none;width:66px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding-top:2px}
+.sw dd{margin:0;color:var(--text);font-family:var(--mono);font-size:13.5px;line-height:1.5}
+.sw dd code{font-size:13.5px;user-select:all}
+.sw .btn{margin:18px 22px 22px;align-self:flex-start}
+ul.grid{list-style:none;padding:0}
+
+/* Schrift */
+.type .h3{margin-top:12px}
+.type p{margin:14px 0 0}
+.t-arch{font-stretch:125%;font-weight:800;font-size:clamp(26px,3.4vw,36px);line-height:1.1;color:var(--text)!important}
+.t-arch-s{font-size:19px;line-height:1.6}
+.t-mono{font-family:var(--mono);font-weight:600;font-size:clamp(17px,2.2vw,21px);color:var(--text)!important}
+.t-mono-s{font-family:var(--mono);font-size:15px;line-height:1.7}
+
+/* Bitte nicht */
+.bn{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.bn p{margin:0!important}
+.bn-ex{position:relative;align-self:stretch;height:120px;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:12px;overflow:hidden}
+.bn-ex::after{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent calc(50% - 1.5px),#C42E22 calc(50% - 1.5px),#C42E22 calc(50% + 1.5px),transparent calc(50% + 1.5px))}
+.bn-sym{width:76px;height:76px}
+.bn-wide{transform:scaleX(1.55)}
+.bn-fx{filter:drop-shadow(5px 7px 3px rgba(0,0,0,.5))}
+.bn-busy{background:repeating-conic-gradient(#E63B2E 0 12.5%,#FFE45C 0 25%,#4F86E8 0 37.5%,#15171C 0 50%) 0 0/36px 36px}
+.bn-type{font:800 30px/1 var(--font);font-stretch:125%;letter-spacing:.32em;color:#15171C;padding-left:.32em}
+.t-wrap td,.t-wrap th{white-space:normal}
