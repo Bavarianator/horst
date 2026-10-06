@@ -15,6 +15,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/duell.css">
 </head>
 <body>
 <!-- layout:header -->
@@ -84,9 +85,75 @@
 </div>
 </section>
 
-<section class="sec">
+<section class="sec-sm">
 <div class="wrap">
-<p class="muted">Inhalt folgt.</p>
+<div class="panel duell">
+
+<div id="start">
+<span class="eyebrow">So geht’s</span>
+<h2 class="h2 duell-h">Acht Sätze, ein Rotstift.</h2>
+<ol class="duell-regeln">
+<li>Jeder Satz enthält ein bis drei Fehler: Rechtschreibung, Grammatik oder Zeichensetzung. Am Stil musst du nichts ändern.</li>
+<li>Korrigiere direkt im Textfeld und drück „Prüfen“ – oder <kbd>Strg</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd>.</li>
+<li>Jeder behobene Fehler bringt einen Punkt. Neu eingebaute Fehler kosten Punkte, ein Tipp kostet einen.</li>
+<li>Fehlerfrei in unter 20 Sekunden gibt einen Bonuspunkt. Die Uhr läuft nur mit, Zeitdruck gibt es keinen.</li>
+</ol>
+<p class="muted small" id="bestwert" hidden></p>
+<div class="btns"><button type="button" class="btn btn-red" id="los">Duell starten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></div>
+</div>
+
+<div id="spiel" hidden>
+<div class="toolbar">
+<span class="eyebrow" id="runde">Satz 1 von 8</span>
+<span class="duell-meta"><span class="score" id="punkte">0 Punkte</span><span class="score duell-uhr" role="timer" aria-label="Zeit für diesen Satz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2 2M10 2h4"></path></svg><span id="uhr">0 s</span></span></span>
+</div>
+<label class="label duell-label" for="eingabe">Korrigiere den Satz</label>
+<textarea id="eingabe" rows="3" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+<div class="btns duell-aktionen">
+<button type="button" class="btn btn-red" id="pruefen">Prüfen</button>
+<button type="button" class="btn btn-ghost" id="tippen">Tipp <span class="faint">(−1 Punkt)</span></button>
+</div>
+<p class="duell-tipp" id="tipp" hidden></p>
+<div id="auswertung" hidden>
+<span class="label">Deine Fassung → Lösung</span>
+<p class="diff duell-diff" id="vergleich"></p>
+<p class="duell-urteil" id="urteil"></p>
+<div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2z"></path><path d="M8 7h8M8 11h6"></path></svg><div><strong>Regel:</strong> <span id="regel"></span></div></div>
+<div class="btns duell-aktionen"><button type="button" class="btn btn-light" id="weiter">Nächster Satz</button></div>
+</div>
+</div>
+
+<div id="ende" hidden>
+<span class="eyebrow">Ergebnis</span>
+<h2 class="h2 duell-h" id="titel" tabindex="-1"></h2>
+<p class="lead duell-best" id="bestinfo"></p>
+<div class="stats duell-stats">
+<div class="stat"><b id="e-punkte"></b><span>Punkte</span></div>
+<div class="stat"><b id="e-zeit"></b><span>Zeit insgesamt</span></div>
+<div class="stat"><b id="e-fehlerfrei"></b><span>Sätze fehlerfrei</span></div>
+</div>
+<div class="btns duell-aktionen">
+<button type="button" class="btn btn-red" id="nochmal">Nochmal</button>
+<button type="button" class="btn btn-ghost" id="kopieren">Ergebnis kopieren</button>
+</div>
+<textarea id="teilen" class="duell-teilen" rows="3" readonly hidden aria-label="Ergebnis zum Kopieren"></textarea>
+</div>
+
+<p class="sr-only" id="ansage" aria-live="polite"></p>
+</div>
+</div>
+</section>
+
+<section class="sec-sm sec-alt">
+<div class="wrap">
+<span class="eyebrow">Hintergrund</span>
+<h2 class="h2 duell-h">Warum das schwer ist</h2>
+<p class="lead duell-warum">Du hast gerade gemacht, was HORST bei jedem Satz tut: Fehler finden, nur diese ändern und alles andere stehen lassen. Gerade das Stehenlassen ist schwer, denn wer zu eifrig korrigiert, baut neue Fehler ein. HORST hat genau diese Aufgabe an Millionen Satzpaaren geübt.</p>
+<div class="btns duell-aktionen">
+<a class="btn btn-red" href="testraum.html">Text im Testraum prüfen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost" href="training.html">So wurde HORST trainiert</a>
+<a class="btn btn-ghost" href="spickzettel.html">Regeln im Spickzettel</a>
+</div>
 </div>
 </section>
 </main>
@@ -105,5 +172,6 @@
 </div>
 </footer>
 <!-- /layout:footer -->
+<script type="module" src="js/duell.js"></script>
 </body>
 </html>
