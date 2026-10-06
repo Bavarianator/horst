@@ -15,6 +15,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/spickzettel.css">
 </head>
 <body>
 <!-- layout:header -->
@@ -84,9 +85,211 @@
 </div>
 </section>
 
-<section class="sec">
+<section class="sec sz">
 <div class="wrap">
-<p class="muted">Inhalt folgt.</p>
+<div class="sec-head">
+<div>
+<span class="eyebrow">24 Einträge · 6 Kategorien</span>
+<h2 class="h2">Regel, Beispiel, Eselsbrücke.</h2>
+<p class="lead">Durchgestrichen steht der Fehler, markiert die Korrektur. Jedes Beispiel lässt sich direkt im Testraum von HORST prüfen.</p>
+</div>
+</div>
+<div class="sz-tools" id="sz-tools" hidden>
+<div class="sz-bar">
+<div class="sz-search"><label class="label" for="sz-q">Suchen</label><input class="input" id="sz-q" type="search" autocomplete="off" spellcheck="false" placeholder="z. B. dass, Komma, Genitiv"></div>
+<button type="button" class="btn btn-ghost btn-sm" id="sz-print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"></path><rect x="3" y="9" width="18" height="8" rx="2"></rect><path d="M6 14h12v7H6z"></path></svg>Als PDF drucken</button>
+</div>
+<div class="chips" role="group" aria-label="Nach Kategorie filtern">
+<button type="button" class="chip" data-kat="alle" aria-pressed="true">Alle</button>
+<button type="button" class="chip" data-kat="rechtschreibung" aria-pressed="false">Rechtschreibung <span class="faint">8</span></button>
+<button type="button" class="chip" data-kat="gross-klein" aria-pressed="false">Groß/klein <span class="faint">3</span></button>
+<button type="button" class="chip" data-kat="kommas" aria-pressed="false">Kommas <span class="faint">4</span></button>
+<button type="button" class="chip" data-kat="grammatik" aria-pressed="false">Grammatik <span class="faint">5</span></button>
+<button type="button" class="chip" data-kat="getrennt-zusammen" aria-pressed="false">Getrennt/zusammen <span class="faint">2</span></button>
+<button type="button" class="chip" data-kat="zeichensetzung" aria-pressed="false">Zeichensetzung <span class="faint">2</span></button>
+</div>
+<p class="faint small sz-count" aria-live="polite" aria-atomic="true"><span id="sz-count">24 von 24</span> Einträgen</p>
+</div>
+<div class="grid diff sz-list">
+<article class="card sz-item" id="seit-seid" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">seit oder seid</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Ihr <del>seit</del><ins>seid</ins> heute aber früh dran.</p>
+<p>„seit“ gibt an, ab wann etwas gilt: seit gestern, seit ich hier wohne. „seid“ ist eine Form des Verbs „sein“: ihr seid, seid leise!</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Zeit hat ein t, also auch „seit“. Das d in „seid“ gehört zum Verb sein: wir sind, ihr seid.</p>
+<a class="more sz-try" href="testraum.html?text=Ihr%20seit%20heute%20aber%20fr%C3%BCh%20dran." aria-label="Im Testraum ausprobieren: seit oder seid">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="wieder-wider" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">wieder oder wider</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Da muss ich dir leider <del>wiedersprechen</del><ins>widersprechen</ins>.</p>
+<p>„wieder“ mit ie heißt „noch einmal“ oder „zurück“: wiederholen, Wiedersehen. „wider“ ohne e heißt „gegen“: widersprechen, Widerstand, widerlegen.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Passt „gegen“, fehlt das e: Wer widerspricht, spricht dagegen.</p>
+<a class="more sz-try" href="testraum.html?text=Da%20muss%20ich%20dir%20leider%20wiedersprechen." aria-label="Im Testraum ausprobieren: wieder oder wider">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="tod-tot" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">Tod oder tot</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Die Pflanze ist leider <del>tod</del><ins>tot</ins>.</p>
+<p>„der Tod“ ist ein Nomen und endet auf d. „tot“ ist ein Adjektiv und endet auf t – ebenso Verben wie totlachen oder totschweigen.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Passt „der“ davor, ist es der Tod. Verstärkte Adjektive kommen vom Nomen: todmüde, todsicher, todernst.</p>
+<a class="more sz-try" href="testraum.html?text=Die%20Pflanze%20ist%20leider%20tod." aria-label="Im Testraum ausprobieren: Tod oder tot">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="end-ent" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">end- oder ent-</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Die Entscheidung ist <del>entgültig</del><ins>endgültig</ins>.</p>
+<p>Die Vorsilbe „ent-“ hat mit dem Ende nichts zu tun: entgegen, entscheiden, entlang. Wörter, die vom „Ende“ kommen, schreibt man mit d: endgültig, endlich, endlos, Endspiel.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Steckt „Ende“ drin, kommt ein d: Endgültig gilt bis zum Ende.</p>
+<a class="more sz-try" href="testraum.html?text=Die%20Entscheidung%20ist%20entg%C3%BCltig." aria-label="Im Testraum ausprobieren: end- oder ent-">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="standard" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">Standard, nicht Standart</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Das ist bei uns <del>Standart</del><ins>Standard</ins>.</p>
+<p>„Standard“ (Maßstab, Norm) endet auf d, wie das englische „standard“. Mit t gibt es nur „die Standarte“, eine Fahne.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Stan-d-ar-d: zwei d, kein t.</p>
+<a class="more sz-try" href="testraum.html?text=Das%20ist%20bei%20uns%20Standart." aria-label="Im Testraum ausprobieren: Standard, nicht Standart">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="naemlich" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">nämlich ohne h</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Ich komme später, ich habe <del>nähmlich</del><ins>nämlich</ins> noch Training.</p>
+<p>„nämlich“ hat kein Dehnungs-h, obwohl das ä lang gesprochen wird.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>„nämlich“ kommt von „Name“ – und der hat auch kein h.</p>
+<a class="more sz-try" href="testraum.html?text=Ich%20komme%20sp%C3%A4ter%2C%20ich%20habe%20n%C3%A4hmlich%20noch%20Training." aria-label="Im Testraum ausprobieren: nämlich ohne h">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="rhythmus" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">Rhythmus</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Sie hat <del>Rythmus</del><ins>Rhythmus</ins> im Blut.</p>
+<p>„Rhythmus“ kommt aus dem Griechischen und behält dessen Schreibung: Rh am Anfang, y für den ü-Laut, th in der Mitte.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Zwei h, je eins hinter R und t: Rh-y-th-mus.</p>
+<a class="more sz-try" href="testraum.html?text=Sie%20hat%20Rythmus%20im%20Blut." aria-label="Im Testraum ausprobieren: Rhythmus">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="ss-oder-sz" data-kat="rechtschreibung">
+<div class="card-top"><h3 class="h3">ss oder ß</h3><span class="tag">Rechtschreibung</span></div>
+<p class="sz-ex">Wir gehen am <del>Fluß</del><ins>Fluss</ins> spazieren.</p>
+<p>Für den scharfen s-Laut schreibt man nach kurzem Vokal ss (Fluss, muss, Kuss), nach langem Vokal oder Doppellaut ß (Fuß, Straße, heißen). „Fluß“ ist die alte Schreibung vor der Reform von 1996.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Der Fluss fließt: kurzes u – ss, langes ie – ß.</p>
+<a class="more sz-try" href="testraum.html?text=Wir%20gehen%20am%20Flu%C3%9F%20spazieren." aria-label="Im Testraum ausprobieren: ss oder ß">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="nominalisierung" data-kat="gross-klein">
+<div class="card-top"><h3 class="h3">Verben und Adjektive als Nomen</h3><span class="tag">Groß/klein</span></div>
+<p class="sz-ex">Alles <del>gute</del><ins>Gute</ins> und viel Spaß beim <del>lesen</del><ins>Lesen</ins>!</p>
+<p>Werden Verben oder Adjektive als Nomen gebraucht, schreibt man sie groß: das Laufen, beim Lesen, alles Gute, nichts Neues. Klein bleiben Superlative mit „am“: am besten.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Achte auf Begleiter: Artikel, beim, zum, etwas, nichts, viel, alles – dahinter wird es meist groß.</p>
+<a class="more sz-try" href="testraum.html?text=Alles%20gute%20und%20viel%20Spa%C3%9F%20beim%20lesen!" aria-label="Im Testraum ausprobieren: Verben und Adjektive als Nomen">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="anrede" data-kat="gross-klein">
+<div class="card-top"><h3 class="h3">Sie, Ihnen, Ihr</h3><span class="tag">Groß/klein</span></div>
+<p class="sz-ex">Vielen Dank für <del>ihre</del><ins>Ihre</ins> Nachricht, ich melde mich bei <del>ihnen</del><ins>Ihnen</ins>.</p>
+<p>Die höfliche Anrede schreibt man in allen Formen groß: Sie, Ihnen, Ihr, Ihre – nur „sich“ bleibt klein (Melden Sie sich). „du“ und „ihr“ schreibt man klein; in Briefen darf man sie auch großschreiben.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Groß ist, wen du siezt – nicht die, über die du sprichst: Ich gebe sie (die Unterlagen) Ihnen.</p>
+<a class="more sz-try" href="testraum.html?text=Vielen%20Dank%20f%C3%BCr%20ihre%20Nachricht%2C%20ich%20melde%20mich%20bei%20ihnen." aria-label="Im Testraum ausprobieren: Sie, Ihnen, Ihr">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="tageszeiten" data-kat="gross-klein">
+<div class="card-top"><h3 class="h3">heute Abend, sonntags</h3><span class="tag">Groß/klein</span></div>
+<p class="sz-ex">Ich jogge <del>Sonntags</del><ins>sonntags</ins>, heute <del>abend</del><ins>Abend</ins> aber nicht.</p>
+<p>Nach heute, gestern und morgen sind Tageszeiten Nomen und groß: heute Abend, gestern Morgen. Mit -s am Ende sind es Adverbien und klein: abends, sonntags, montagmorgens.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Mit -s klein, mit Artikel oder nach heute, gestern, morgen groß: sonntags, aber am Sonntag und heute Abend.</p>
+<a class="more sz-try" href="testraum.html?text=Ich%20jogge%20Sonntags%2C%20heute%20abend%20aber%20nicht." aria-label="Im Testraum ausprobieren: heute Abend, sonntags">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="komma-nebensatz" data-kat="kommas">
+<div class="card-top"><h3 class="h3">Komma vor dass, weil, ob</h3><span class="tag">Kommas</span></div>
+<p class="sz-ex">Sie fragt<ins>,</ins> ob wir morgen Zeit haben.</p>
+<p>Nebensätze trennt man immer mit Komma ab – egal, ob sie vor, nach oder mitten im Hauptsatz stehen. Typische Einleitewörter sind dass, weil, ob, wenn, obwohl und als (als er kam).</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Steht das gebeugte Verb am Ende, ist es meist ein Nebensatz – und der bekommt ein Komma. Bei „ohne dass“ oder „als ob“ steht es vor dem ganzen Ausdruck.</p>
+<a class="more sz-try" href="testraum.html?text=Sie%20fragt%20ob%20wir%20morgen%20Zeit%20haben." aria-label="Im Testraum ausprobieren: Komma vor dass, weil, ob">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="komma-relativsatz" data-kat="kommas">
+<div class="card-top"><h3 class="h3">Komma beim Relativsatz</h3><span class="tag">Kommas</span></div>
+<p class="sz-ex">Das Buch<ins>,</ins> das du mir geliehen hast<ins>,</ins> ist spannend.</p>
+<p>Relativsätze beginnen meist mit der, die, das oder welcher und werden mit Komma abgetrennt. Steht der Relativsatz mitten im Satz, braucht er ein Komma davor und eins dahinter.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Ein eingeschobener Relativsatz steht wie in Klammern: zwei Kommas, nie nur eins.</p>
+<a class="more sz-try" href="testraum.html?text=Das%20Buch%20das%20du%20mir%20geliehen%20hast%20ist%20spannend." aria-label="Im Testraum ausprobieren: Komma beim Relativsatz">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="komma-infinitiv" data-kat="kommas">
+<div class="card-top"><h3 class="h3">Komma vor um zu, ohne zu, statt zu</h3><span class="tag">Kommas</span></div>
+<p class="sz-ex">Ich spare<ins>,</ins> um mir ein Fahrrad zu kaufen.</p>
+<p>Beginnt eine Infinitivgruppe mit um, ohne, statt, anstatt, außer oder als, ist das Komma Pflicht – auch wenn sie kurz ist: Sie ging, ohne zu grüßen. Pflicht ist es auch, wenn sie von einem Nomen abhängt (der Plan, früh aufzubrechen) oder ein Hinweiswort wie „daran“ auf sie verweist (Er dachte nicht daran, so früh aufzugeben). Sonst ist das Komma meist freigestellt: Ich habe vergessen(,) anzurufen.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Steht um, ohne, statt, anstatt, außer oder als vor dem zu, setzt du davor ein Komma – und bei einem Einschub auch dahinter.</p>
+<a class="more sz-try" href="testraum.html?text=Ich%20spare%20um%20mir%20ein%20Fahrrad%20zu%20kaufen." aria-label="Im Testraum ausprobieren: Komma vor um zu, ohne zu, statt zu">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="komma-und" data-kat="kommas">
+<div class="card-top"><h3 class="h3">Komma vor und</h3><span class="tag">Kommas</span></div>
+<p class="sz-ex">Ich koche<del>,</del> und decke den Tisch.</p>
+<p>Teilen sich beide Teile ein Subjekt, das nur einmal dasteht, kommt kein Komma vor „und“: Ich koche und decke den Tisch. Verbindet „und“ zwei vollständige Hauptsätze mit eigenem Subjekt, darf man ein Komma setzen, muss aber nicht: Ich koche(,) und du deckst den Tisch.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Pflicht ist das Komma vor „und“, wo ein eingeschobener Nebensatz endet und der übergeordnete Satz weiterläuft: Ich hoffe, dass es klappt, und freue mich darauf. Verbindet „und“ gleichrangige Nebensätze, steht keins: Ich weiß, dass er kommt und dass du gehst.</p>
+<a class="more sz-try" href="testraum.html?text=Ich%20koche%2C%20und%20decke%20den%20Tisch." aria-label="Im Testraum ausprobieren: Komma vor und">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="das-dass" data-kat="grammatik">
+<div class="card-top"><h3 class="h3">das oder dass</h3><span class="tag">Grammatik</span></div>
+<p class="sz-ex">Ich hoffe, <del>das</del><ins>dass</ins> du bald kommst.</p>
+<p>„dass“ ist eine Konjunktion und leitet einen Nebensatz ein. „das“ ist Artikel (das Haus) oder Pronomen (das Haus, das ich meine).</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Lässt sich „dieses“, „jenes“ oder „welches“ einsetzen, schreibt man „das“ mit einem s. Sonst „dass“.</p>
+<a class="more sz-try" href="testraum.html?text=Ich%20hoffe%2C%20das%20du%20bald%20kommst." aria-label="Im Testraum ausprobieren: das oder dass">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="wegen" data-kat="grammatik">
+<div class="card-top"><h3 class="h3">wegen des Regens</h3><span class="tag">Grammatik</span></div>
+<p class="sz-ex">Wegen <del>dem Regen</del><ins>des Regens</ins> fällt das Spiel aus.</p>
+<p>Standardsprachlich verlangt „wegen“ den Genitiv: wegen des Regens, wegen der Hitze. Der Dativ (wegen dem Regen) ist umgangssprachlich – in Bewerbungen, Briefen und Hausarbeiten besser den Genitiv nehmen.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Wegen wessen? Wegen des Regens. Und statt „wegen mir“ heißt es „meinetwegen“.</p>
+<a class="more sz-try" href="testraum.html?text=Wegen%20dem%20Regen%20f%C3%A4llt%20das%20Spiel%20aus." aria-label="Im Testraum ausprobieren: wegen des Regens">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="als-wie" data-kat="grammatik">
+<div class="card-top"><h3 class="h3">größer als, so groß wie</h3><span class="tag">Grammatik</span></div>
+<p class="sz-ex">Mein Bruder ist größer <del>wie</del><ins>als</ins> ich.</p>
+<p>Bei Ungleichheit, also nach einem Komparativ, steht „als“: größer als, besser als, anders als. Bei Gleichheit steht „wie“: so groß wie, genauso gut wie.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Gleich mit wie, ungleich mit als. Die Doppelung „als wie“ ist umgangssprachlich.</p>
+<a class="more sz-try" href="testraum.html?text=Mein%20Bruder%20ist%20gr%C3%B6%C3%9Fer%20wie%20ich." aria-label="Im Testraum ausprobieren: größer als, so groß wie">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="derselbe" data-kat="grammatik">
+<div class="card-top"><h3 class="h3">derselbe oder der gleiche</h3><span class="tag">Grammatik</span></div>
+<p class="sz-ex">Wir wohnen in <del>der selben</del><ins>derselben</ins> Straße.</p>
+<p>Genau genommen meint „derselbe“ ein und dasselbe Ding, „der gleiche“ ein zweites von gleicher Art. Zusammen schreibt man derselbe, dieselbe, dasselbe; getrennt der gleiche und Formen mit Präposition wie im selben Haus oder zur selben Zeit.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Trägst du dasselbe Hemd wie gestern, hast du es nicht gewechselt. Trägst du das gleiche Hemd wie dein Kollege, gibt es zwei davon.</p>
+<a class="more sz-try" href="testraum.html?text=Wir%20wohnen%20in%20der%20selben%20Stra%C3%9Fe." aria-label="Im Testraum ausprobieren: derselbe oder der gleiche">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="scheinbar" data-kat="grammatik">
+<div class="card-top"><h3 class="h3">scheinbar oder anscheinend</h3><span class="tag">Grammatik</span></div>
+<p class="sz-ex">Der Bus hat <del>scheinbar</del><ins>anscheinend</ins> Verspätung, er ist noch nicht da.</p>
+<p>„anscheinend“ heißt: allem Anschein nach, es stimmt wohl. „scheinbar“ heißt: Es sieht nur so aus, stimmt aber nicht – Er hörte scheinbar zu, in Wahrheit träumte er.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Was scheinbar so ist, ist nur Schein. Was anscheinend so ist, ist allem Anschein nach wahr.</p>
+<a class="more sz-try" href="testraum.html?text=Der%20Bus%20hat%20scheinbar%20Versp%C3%A4tung%2C%20er%20ist%20noch%20nicht%20da." aria-label="Im Testraum ausprobieren: scheinbar oder anscheinend">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="gar-nicht" data-kat="getrennt-zusammen">
+<div class="card-top"><h3 class="h3">gar nicht, zu Hause</h3><span class="tag">Getrennt/zusammen</span></div>
+<p class="sz-ex">Ich war gestern <del>garnicht</del><ins>gar nicht</ins> zu <del>hause</del><ins>Hause</ins>.</p>
+<p>„gar nicht“, „gar kein“ und „gar nichts“ schreibt man immer getrennt. Bei „zu Hause“ empfiehlt der Duden getrennt und mit großem H; „zuhause“ in einem Wort ist ebenfalls erlaubt.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>„garnicht“ gibt es gar nicht. Das Nomen schreibt man immer zusammen und groß: mein Zuhause.</p>
+<a class="more sz-try" href="testraum.html?text=Ich%20war%20gestern%20garnicht%20zu%20hause." aria-label="Im Testraum ausprobieren: gar nicht, zu Hause">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="kaffeemaschine" data-kat="getrennt-zusammen">
+<div class="card-top"><h3 class="h3">Kaffeemaschine in einem Wort</h3><span class="tag">Getrennt/zusammen</span></div>
+<p class="sz-ex">Die <del>Kaffee Maschine</del><ins>Kaffeemaschine</ins> ist kaputt.</p>
+<p>Zusammengesetzte Nomen schreibt man in einem Wort. Bei langen oder unübersichtlichen Wörtern darf ein Bindestrich gliedern (Mehrzweck-Küchenmaschine), ein Leerzeichen ist dagegen nie richtig.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Ein Ding, ein Wort: Englisch coffee machine, deutsch Kaffeemaschine.</p>
+<a class="more sz-try" href="testraum.html?text=Die%20Kaffee%20Maschine%20ist%20kaputt." aria-label="Im Testraum ausprobieren: Kaffeemaschine in einem Wort">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="apostroph-genitiv" data-kat="zeichensetzung">
+<div class="card-top"><h3 class="h3">Apostroph beim Genitiv</h3><span class="tag">Zeichensetzung</span></div>
+<p class="sz-ex">Hast du <del>Klaus</del><ins>Klaus’</ins> Fahrrad gesehen?</p>
+<p>Das Genitiv-s hängt man ohne Apostroph an: Andys Fahrrad, Sabines Auto. Endet ein Name auf einen s-Laut (etwa s, ß, x, z), steht statt des s nur ein Apostroph: Andreas’ Buch, Max’ Rad. Bei Namen von Läden oder Firmen erlaubt das amtliche Regelwerk beides: Andys Imbiss oder Andy’s Imbiss.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Zischt der Name am Ende, ersetzt der Apostroph das s – sonst kommt das s ohne Apostroph.</p>
+<a class="more sz-try" href="testraum.html?text=Hast%20du%20Klaus%20Fahrrad%20gesehen%3F" aria-label="Im Testraum ausprobieren: Apostroph beim Genitiv">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="card sz-item" id="leerzeichen" data-kat="zeichensetzung">
+<div class="card-top"><h3 class="h3">Kein Leerzeichen vor Satzzeichen</h3><span class="tag">Zeichensetzung</span></div>
+<p class="sz-ex"><del>Hallo ,</del><ins>Hallo,</ins> wie geht es <del>dir ?</del><ins>dir?</ins></p>
+<p>Punkt, Komma, Frage- und Ausrufezeichen, Doppelpunkt und Semikolon folgen ohne Leerzeichen auf das Wort davor; danach steht ein Leerzeichen. Anders der Gedankenstrich: Er hat auf beiden Seiten ein Leerzeichen.</p>
+<p class="sz-merk"><span>Eselsbrücke</span>Satzzeichen kleben links und halten rechts Abstand.</p>
+<a class="more sz-try" href="testraum.html?text=Hallo%20%2C%20wie%20geht%20es%20dir%20%3F" aria-label="Im Testraum ausprobieren: Kein Leerzeichen vor Satzzeichen">Im Testraum ausprobieren<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</div>
+<div class="note" id="sz-leer" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><div><strong>Kein Eintrag gefunden.</strong> Versuch ein anderes Stichwort oder wähle die Kategorie „Alle“.</div></div>
+</div>
+</section>
+
+<section class="sec-sm sec-alt sz-outro">
+<div class="wrap">
+<span class="eyebrow">Und HORST?</span>
+<h2 class="h2">Kein Regelwerk, nur Beispiele.</h2>
+<p class="lead">HORST hat keine dieser Regeln je gelesen. Es lernt genau solche Muster aus Millionen Beispielsätzen – fehlerhaft und korrigiert – und überträgt sie auf neue Texte.</p>
+<div class="btns"><a class="btn btn-red" href="duell.html">Teste dich im Korrektur-Duell<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn btn-ghost" href="funktionsweise.html">So lernt HORST</a></div>
 </div>
 </section>
 </main>
@@ -105,5 +308,6 @@
 </div>
 </footer>
 <!-- /layout:footer -->
+<script type="module" src="js/spickzettel.js"></script>
 </body>
 </html>
