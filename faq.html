@@ -119,12 +119,16 @@
 <div class="ans"><p>Nein. Die Demo im Browser ist kostenlos, hat aber ein knappes Tageskontingent auf einer geteilten Grafikkarte. Gewichte und Code kann jeder herunterladen. Die Lizenz ist allerdings noch vorläufig.</p></div>
 </details>
 <details>
+<summary>Was ist der Testraum?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<div class="ans"><p>Hier lässt du einen eigenen Text live von HORST korrigieren. Im Fehlerlabor kannst du saubere Sätze erst mit Fehlern versehen und sie dann reparieren lassen. Die Demo nutzt die zuletzt veröffentlichten Gewichte – die können älter sein als die auf der Benchmark-Seite gemessene Stufe 2. <a href="testraum.html">Zum Testraum</a></p></div>
+</details>
+<details>
 <summary>Läuft HORST auch ohne Internet?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
 <div class="ans"><p>Ja. Einmal heruntergeladen, läuft HORST lokal – auf einer Grafikkarte schnell, auf dem Prozessor langsamer, aber zuverlässig. <a href="entwickler.html">So geht’s</a></p></div>
 </details>
 <details>
 <summary>Was passiert mit meinem Text?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
-<div class="ans"><p>Diese Website sammelt keine Texte, setzt keine Cookies und lädt keine Inhalte von Dritten. Die Demo läuft bei Hugging Face; dein Text wird dort verarbeitet, und es gelten deren Bedingungen. Für vertrauliche Texte: HORST lokal laufen lassen.</p></div>
+<div class="ans"><p>Diese Website setzt keine Cookies, speichert nichts auf einem Server und lädt keine Inhalte von Dritten. Nur im <a href="testraum.html">Testraum</a> geht dein Text an die HORST-Demo bei Hugging Face – und erst, wenn du auf „Korrigieren“ klickst; dort gelten deren Bedingungen. Spiele wie das Korrektur-Duell laufen komplett im Browser, der Bestwert liegt nur lokal in deinem Browser. Für vertrauliche Texte lass HORST lieber lokal laufen: <a href="entwickler.html">So geht’s</a></p></div>
 </details>
 <details>
 <summary>Wie lang darf ein Text sein?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
@@ -160,6 +164,7 @@
 <div><dt>Edit-Dropout</dt><dd>Trainingstrick: Aus einem echten Fehlerpaar wird nur ein Teil der Fehler übernommen, das Ziel bleibt korrekt.</dd></div>
 <div><dt>Encoder</dt><dd>Der Teil des Modells, der den Eingabesatz liest und für jedes Wortstück eine Bedeutung im Satzzusammenhang berechnet.</dd></div>
 <div id="g-f"><dt>F0,5</dt><dd>Kennzahl aus Precision und Recall, bei der Precision doppelt zählt. 1,0 ist perfekt.</dd></div>
+<div><dt>Fehlerlabor</dt><dd>Teil des <a href="testraum.html">Testraums</a>, der saubere Sätze gezielt mit Fehlern versieht – im Kleinen das, was der Rauschgenerator im Training macht (<a href="training.html#rauschen">Training</a>).</dd></div>
 <div><dt>Fine-Tuning</dt><dd>Das Nachtrainieren eines fremden, fertigen Modells. HORST verzichtet bewusst darauf.</dd></div>
 <div><dt>fp16</dt><dd>Zahlen mit halber Genauigkeit. Spart Speicher und Rechenzeit, die Gewichte sind so 418 MB groß.</dd></div>
 <div id="g-g"><dt>GEC</dt><dd>Grammatical Error Correction – der Fachbegriff für automatische Grammatik- und Rechtschreibkorrektur.</dd></div>

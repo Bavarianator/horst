@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<title>HORST – News</title>
+<link rel="self" type="application/atom+xml" href="https://bavarianator.github.io/horst/feed.xml"/>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html"/>
+<id>https://bavarianator.github.io/horst/feed.xml</id>
+<updated>2026-10-06T12:00:00Z</updated>
+<author><name>HORST-Projekt</name></author>
+<entry>
+<title>Neu auf der Website: Testraum, Duell und Spickzettel</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#website-ausbau"/>
+<id>https://bavarianator.github.io/horst/news.html#website-ausbau</id>
+<published>2026-10-06T12:00:00Z</published>
+<updated>2026-10-06T12:00:00Z</updated>
+<summary>Im Testraum korrigiert HORST eigene Texte live über die Demo, im Fehlerlabor kannst du Sätze erst kaputt machen und dann reparieren lassen. Dazu kommen das Korrektur-Duell, ein Spickzettel, ein F0,5-Rechner und eine Markenseite.</summary>
+</entry>
+<entry>
+<title>HORST-Hard: Stufe 2 erreicht 0,83 – LanguageTool 0,38</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#hard-ergebnisse"/>
+<id>https://bavarianator.github.io/horst/news.html#hard-ergebnisse</id>
+<published>2026-10-06T12:00:00Z</published>
+<updated>2026-10-06T12:00:00Z</updated>
+<summary>Die erste Messung auf der neuen, unabhängigen Benchmark ist da: Makro-F0,5 von 0,76 auf 0,83, LanguageTool 6.6 kommt auf 0,38. Rückschritte gibt es bei fehlerfreien Sätzen, die nur noch zu 88 % unverändert bleiben.</summary>
+</entry>
+<entry>
+<title>Phase 3: Welle A ist gebaut und getestet</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#phase3"/>
+<id>https://bavarianator.github.io/horst/news.html#phase3</id>
+<published>2026-10-06T12:00:00Z</published>
+<updated>2026-10-06T12:00:00Z</updated>
+<summary>Bevor neue GPU-Zeit verbraucht wird, steht das Werkzeug: KV-Cache-Dekodierer, Edit-Dropout, Dekontamination, Fallen-Sätze und ein automatischer Fehlerbericht. Elf Selbsttests laufen grün.</summary>
+</entry>
+<entry>
+<title>Mining 2.0: Vier Jobs graben in der Wikipedia-Geschichte</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#mining2"/>
+<id>https://bavarianator.github.io/horst/news.html#mining2</id>
+<published>2026-10-06T12:00:00Z</published>
+<updated>2026-10-06T12:00:00Z</updated>
+<summary>Vier parallele Rechenjobs durchsuchen die restlichen Versionsdumps nach kleinen Korrekturen. Ziel sind rund fünf Millionen neue echte Fehlerpaare.</summary>
+</entry>
+<entry>
+<title>HORST-Hard ist fertig: 2.400 Aufgaben in zwölf Kategorien</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#hard-fertig"/>
+<id>https://bavarianator.github.io/horst/news.html#hard-fertig</id>
+<published>2026-10-05T12:00:00Z</published>
+<updated>2026-10-05T12:00:00Z</updated>
+<summary>Die alte Benchmark war vermutlich durch Überschneidungen mit dem Training geschönt. HORST-Hard ist neu gebaut, aus Textabschnitten, die das Training nie gelesen hat.</summary>
+</entry>
+<entry>
+<title>Die Demo ist online</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#demo"/>
+<id>https://bavarianator.github.io/horst/news.html#demo</id>
+<published>2026-10-02T12:00:00Z</published>
+<updated>2026-10-02T12:00:00Z</updated>
+<summary>HORST läuft jetzt im Browser, auf einer geteilten Grafikkarte bei Hugging Face. Bis zu 500 Wörter auf einmal, drei Genauigkeitsstufen und eine Ansicht, die jede Änderung markiert.</summary>
+</entry>
+<entry>
+<title>Ein Logo mit Funke</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#logo"/>
+<id>https://bavarianator.github.io/horst/news.html#logo</id>
+<published>2026-10-02T12:00:00Z</published>
+<updated>2026-10-02T12:00:00Z</updated>
+<summary>Der Querbalken des H ist ein Funke: Er verbindet die beiden Stämme und steht zugleich für den roten Korrekturstift. Zwei Farben und eine eigens gezeichnete Wortmarke.</summary>
+</entry>
+<entry>
+<title>15 Millionen Spezialpaare – und Stufe 2 wird lang</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#spezial"/>
+<id>https://bavarianator.github.io/horst/news.html#spezial</id>
+<published>2026-09-30T12:00:00Z</published>
+<updated>2026-09-30T12:00:00Z</updated>
+<summary>Für Groß- und Kleinschreibung, Kommas und lautgetreue Schreibung entstehen Fehlerpaare jetzt direkt im Training. Zusätzlich liegen 15 Millionen gespeicherte Paare bereit.</summary>
+</entry>
+<entry>
+<title>Die Gewichte sind öffentlich</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#gewichte"/>
+<id>https://bavarianator.github.io/horst/news.html#gewichte</id>
+<published>2026-09-30T12:00:00Z</published>
+<updated>2026-09-30T12:00:00Z</updated>
+<summary>Modell (fp16, 418 MB) und Tokenizer liegen auf Hugging Face, zusammen mit einer ausführlichen Modellbeschreibung samt Vorbehalten. Der Code zum Laden ist dabei.</summary>
+</entry>
+<entry>
+<title>Der Anfang: ein Korrekturmodell von Grund auf</title>
+<link rel="alternate" type="text/html" href="https://bavarianator.github.io/horst/news.html#start"/>
+<id>https://bavarianator.github.io/horst/news.html#start</id>
+<published>2026-09-29T12:00:00Z</published>
+<updated>2026-09-29T12:00:00Z</updated>
+<summary>Die Regeln stehen fest: kein Fine-Tuning, keine fremden Gewichte, alles in der Cloud. Statt der kleinen Variante mit 61 Millionen Parametern wird es die große mit 209 Millionen.</summary>
+</entry>
+</feed>
